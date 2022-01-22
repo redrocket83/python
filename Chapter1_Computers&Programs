@@ -1,1 +1,35 @@
+# "Python Programming: An Introduction to Computer Science"
+# by John Zelle, 3rd Ed.
+# Chapter 1: Computers and Programs
+# End-of-Chapter Exercises
 
+# Review Questions
+
+# 1. Computer Science is the study of computer - False
+
+# A - Computer Science is the study of what can be computed using the techniques of design, analysis and experimentation. Computer science is the foundation of the broader field 
+# of computing which includes areas such as networking, databases and information systems as an example
+
+# 2. The CPU is the brain of the computer - True
+
+# 3. Secondary memory is also called RAM - False
+
+# A - Secondary memory is where permanent information is stored on devices such as HDD, SDD or external storage like USB drives.
+
+# 4. All information that a computer is currently working on is stored in main memory - True
+
+# 5. The syntax of a language is its meaning and semantics is its form - False
+
+# A - Every structure in a programming language  has a precise form (Syntax) and a precise meaning (Semantics)
+
+# 6. A function definition is a sequence of statements that defines a new command - True
+
+# 7. A programming environment refers to a place where programmers work - False
+
+# A - An IDE (Integrated Development Environment) is specifically designed to help programmers write programs.
+
+# 8. A variable is used to give a name to a value so it can be referred to in other places - True
+
+# 9. A loop is used to skip over a section of a program - False
+
+# A loop performs a seqence of statements multiple times 
