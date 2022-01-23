@@ -187,3 +187,170 @@ def main():
 # 1j) print(2 **3) 8
 # 1k) print( 7 / 3) 2.3333333333333335
 # 1l) print(7 //3) 2 #floor division, rounds down to nearest integer
+
+#Q2. Enter and run the chaos program from section 1.6. Try it out with various values of input between 0 and 1 to see that it functions as described in the chapter
+
+# Value = 0.2
+# Output
+# 0.6240000000000001
+# 0.9150335999999998
+# 0.30321373239705673
+# 0.8239731430433209
+# 0.5656614700878645
+# 0.9581854282490118
+# 0.1562578420270518
+# 0.5141811824451928
+# 0.9742156868513789
+# 0.0979659811418921
+
+# Value = 0.3
+# Output
+# .819
+# 0.5781321000000001
+# 0.951191962303401
+# 0.18106067129594494
+# 0.5782830479626462
+# 0.9510998811665442
+# 0.18138469912496583
+# 0.5790887311884146
+# 0.950605393136126
+# 0.1831236407388855
+
+# Q3.Modify the chaos program using 2.0 in place of 3.9 as the multiplier in the logistics function. Your modified line of code should look like the following
+
+#def main():
+#    x =eval(input("Enter a number between 0 and 1: "))
+#    for i in range(10):
+#        x = 2.0 * x * (1-x)
+#        print(x)
+#
+#main()
+
+# Value = 0.2
+# Output
+# 0.32000000000000006
+# 0.43520000000000003
+# 0.49160192
+# 0.4998589445046272
+# 0.49999996020669446
+# 0.49999999999999684
+# 0.49999999999999994
+# 0.49999999999999994
+# 0.49999999999999994
+# 0.49999999999999994
+
+# Value = 0.3
+# Output
+# .42
+# 0.4872
+# 0.49967231999999995
+# 0.4999997852516352
+# 0.4999999999999078
+# 0.49999999999999994
+# 0.49999999999999994
+# 0.49999999999999994
+# 0.49999999999999994
+# 0.49999999999999994
+
+# Whatever value is used, the value always seem to end up around 0.5 and much less random than 3.9
+
+#Q4. Modify the chaos program so it prints out 20 values instead of 10
+
+#def main():
+#    x =eval(input("Enter a number between 0 and 1: "))
+#    for i in range(20):
+#        x = 2.0 * x * (1-x)
+#        print(x)
+#
+#main()
+
+#Q5. Modify the chaos program so that the number of values to print is determined by the user. You will have to add another line at the top of the program to get another value
+#from the user
+
+#def main():
+#    x = eval(input("Enter a number between 0 and 1: "))
+#    n = eval(input("Enter a number of values to print: ")
+#    for i in range(n):
+#        x = 2.0 * x * (1-x)
+#        print(x)
+#
+#main()
+
+#Q6a. The calculations performed in the chaos program can be written in a number of ways that are algebraically equivalent. Write a program for each of the following ways of
+# doing the computation. Have your programs print out 100 interations
+# 3.9 * x * x (1 - x)
+
+def main():
+    print("Question 6a chaotic function")
+    n = eval(input("How many numbers should I print? "))
+    x = eval(input("Enter a value between 0 and 1: "))
+    for i in range(n):
+        x = 3.9 * x * (1-x)
+        print(x)
+main()
+
+#Q6b 
+# 3.9 * (x - x * x)
+
+#def main():
+     print("Question 6b chaotic function")
+     n = eval(input("How many numbers should I print? "))
+     x = eval(input("Enter a value between 0 and 1: "))
+     for i in range(n):
+         x = 3.9 * (x - x * x)
+         print(x)
+main()
+
+#Q6c
+# 3.9 * x - 3.9 * x * x)
+
+#def main():
+     print("Question 6c chaotic function")
+     n = eval(input("How many numbers should I print? "))
+     x = eval(input("Enter a value between 0 and 1: "))
+     for i in range(n):
+         x = 3.9 * x - 3.9 * x * x
+         print(x)
+main()
+
+# Can also combine all 3 programs as per below program
+
+def main():
+    print("This program illustrates a chaotic function")
+    x = eval(input("Enter a number between 0 and 1: "))
+    x2 = x
+    x3 = x
+    for i in range(100):
+        x = 3.9 * x * (1 - x)
+        x2 = 3.9 * (x2 - x2*x2)
+        x3 = 3.9*x3 - 3.9*x3*x3
+        print(x,x2,x3)
+
+main()
+
+# The three scripts show that algebraically equivalent expressions do not return the same outputs when the input values are a floating-point data type. 
+# This is because of rounding errors found in floats
+
+# Q7. [Advanced] Moify the chaos program so it accepts two inputs and then prints a table with 2 columns similar to the one shown in section 1.8. (Note: you probably won't be
+#able to get the columns to line up as nicely as those in the example. 
+
+# This is from the solutions 
+
+# File: chaos.py
+# Chaos program to print side-by-side values
+# Note: This output is UGLY, but uses only things seen in Chapter 1
+#       For a more elegant version see c05ex12.py
+
+def main():
+    print("This program illustrates a chaotic function")
+    x1 = eval(input("Enter the first seed between 0 and 1: "))
+    x2 = eval(input("Enter the second seed between 0 and 1: "))
+    print()
+    print("input     ", x1, " | ", x2)
+    print("-------------------------------------------")
+    for i in range(10):
+        x1 = 3.9 * x1 * (1 - x1)
+        x2 = 3.9 * x2 * (1 - x2)
+        print("      ", x1, " | ", x2)
+
+main()
