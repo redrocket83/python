@@ -46,3 +46,144 @@
 # 8. B
 # 9. A
 # 10. D
+
+# Discussion questions
+
+# Q1a) Hardware vs Software
+# Hardware is the physical components of the computer, such as the central processing unit (CPU) , hard disk , monitor , keyboard and mouse. 
+# Software is the programs that run on a computer. A computer system requires both hardware and software to function.
+
+# Q1b) Algorithm vs Program
+# An algorithm is a sequence of steps for solving a particular problem
+# A program is the result of transforming an algorithim into a working solution
+
+# Q1c) Programming Language vs Natural Language
+# Programming language are exact and unambiguous way. Each structure in a programming language has a precise form (syntax) and a precise meaning (semantics)
+# Natural language is fraught with ambiguiuty and imprecision and miscommunication is common place
+
+# Q1d) High level language vs Machine languge
+# A high level language must be compiled or interpreted fot the computer to understand it. Programs are usually written in high level languages such as Python.
+# Computer hardware understands only a low level langauge called machine language.
+
+# Q1e) Intepreter vs Compiler
+# A high level language must either be compiled or interpreted in order for the computer to understand it. A compiler is a complex computer program which takes in another 
+# program written in a high level language and translates it into an equivalent program in the machine language of the computer. Once a program is compiled, it may be run over
+# and over again without the need for the compiler or source code
+# An interpreter is a program which simulates a computer that understands a high level language. Rather than translating the source program into a machine equivalent, it 
+# analyses and executes the source code instruction by instruction. The interpreter and the source code are needed every time the program runs.
+
+# Q1f) Syntax vs Semantics
+# Each structure in a programming language has a precise form (syntax) and a precise meaning (semantics)
+
+# Q2. List and explain in your own words the role of each of the fice basic functional units of a computer depicted in Figure 1.1 
+
+# Input devices  - Keyboard, mouse to provide some soft of input to the computer
+# CPU - Central Processing Unit is the brain of the computer. This is where all the basic operations of the computer are carried out
+# Main Memory - Stores programs and data which can be accessed by the CPU
+# Secondary memory - Main memory is volatile and is lost when the computer is powered off
+# Output devices - When information needs to be displayed, the CPU sends it to one or more output devices
+
+# Q3. Write a detailed algorithm for making a peanut butter and jelly sandwich
+# 
+# 1. Go to cupboard and get peanut butter and jelly.
+# 2. Go to bread bin and get loaf of bread
+# 3. Take 2 slices of bread out of the packed and lay them face down
+# 4. Go to the drawer and get 2 knives
+# 5. Open the jar and use one knife to get peanut butter out the jar and spread on both slices of bread
+# 6. Open the jar and use the second knife to get jelly out the jar and spread on top of the peanut butter on the bread
+# 7. Take on slice and place it on top of the other sice so the peanut butter and jelly are together
+# 8. Use the knife to cut the sandwich in half
+# 9. Put lid back on peanut jar and jelly jar
+# 10. Put peanut butter jar back in cupboard
+# 11. Put jelly jar back in the cupboard
+# 12. Wash up knives
+# 13. Eat sandwich
+
+# Q4. Many numbers stored in a computer are not exact values but approximations which will be seen in later chapters. Usually small differences are not a problem but given
+# what you have learned about chaotic behaviour, can you think of any examples where this might be a problem.
+
+# A4. This may be a critical problem in financial firms, architectural calculations or medical measurements
+
+# Q5) Trace through the chaos program from Section 1.6 by hand using 0.15 as the input value and show the sequence of output which results
+
+# chaos.py
+# This program illustrates a chaotic function
+def main():
+         print("This program illustrates a chaotic function")
+         x = eval(input("Enter a number between 0 and 1: "))
+         for i in range(10):
+             x = 3.9 * x * (1 - x)
+             print(x)
+
+# x = .15
+#                                                      
+# for 0 in range(10):                                                  
+#     x = 3.9 * .15 * (1 - .15)                        
+#     print(0.49725)                                   
+#                                                       
+# for 1 in range(10):                                  
+#     x = 3.9 * 0.49725 * (1 - 0.49725)                 
+#     print(0.97497050625)                             
+#                                                       
+# for 2 in range(10):                                  
+#     x = 3.9 * 0.97497050625 * (1 - 0.97497050625)    
+#     print(0.09517177095122)
+#     
+# for 3 in range(10):                    
+#     x = 3.9 * 0.09517177095122 * (1 - 0.09517177095122)
+#     print(0.3358450093644)
+# 
+# for 4 in range(10):                    
+#     x = 3.9 * 0.3358450093644 * (1 - 0.3358450093644)
+#     print(0.86990724229278)
+# 
+# for 5 in range(10):                    
+#     x = 3.9 * 0.86990724229278 * (1 - 0.86990724229278)
+#     print(0.44135766518747)
+# 
+# for 6 in range(10):                    
+#     x = 3.9 * 0.44135766518747 * (1 - 0.44135766518747)
+#     print(0.96158819861419)
+# 
+# for 7 in range(10):                    
+#     x = 3.9 * 0.96158819861419 * (1 - 0.96158819861419)
+#     print(0.14405170611043)
+# 
+# for 8 in range(10):                    
+#     x = 3.9 * .0.14405170611043 * (1 - .0.14405170611043)
+#     print(0.48087316710069)
+# 
+# for 9 in range(10):                    
+#     x = 3.9 * 0.48087316710069 * (1 - 0.48087316710069)
+#     print(0.97357324062664)
+#
+#The below shows the difference when a calculator is used vs the program's intepretation
+#
+# Trace output sequence       Output sequence when program is run:
+# 0.49725                     0.49724999999999997 
+# 0.97497050625               0.97497050625
+# 0.09517177095122            0.09517177095121285
+# 0.3358450093644             0.3358450093643686
+# 0.86990724229278            0.8699072422927216
+# 0.44135766518747            0.4413576651876355
+# 0.96158819861419            0.9615881986142427
+# 0.14405170611043            0.14405170611022783
+# 0.48087316710069            0.48087316710014555
+# 0.97357324062664            0.9735732406265619
+
+# Programming Exercises
+
+# PROGRAMMING EXERCISES
+
+# 1a) print("Hello, world!") Hello, world!
+# 1b) print("Hello", "world!") Hello world!
+# 1c) print(3) 3
+# 1d) print(3.0) 3 0
+# 1e) priint(2 + 3) 5
+# 1f) print 2.0 +3.0) 5.0
+# 1g) print("2" + "3") 23
+# 1h) print("2 + 3 =" 2 +3)  2 + 3 = 5
+# 1i) print(2 * 3) 6
+# 1j) print(2 **3) 8
+# 1k) print( 7 / 3) 2.3333333333333335
+# 1l) print(7 //3) 2 #floor division, rounds down to nearest integer
