@@ -48,9 +48,13 @@
 #
 # A9. Ref Page 43/44. A definite loop will execute a definite number of times and is basically known as a counted loop
 #
-# for i in range(10): for example
+#     for i in range(10): for example
 #
 # Q10. In a flowchart, diamonds are used to show statement sequences and rectangles are used for decision points. FALSE
 #
 # A10. Ref Page 46/47. Diamonds are used for decision points and rectangles are use to assign the next item in the sequence 
+#
+# Multiple Choice Questions
+#
+# Q1.
 
