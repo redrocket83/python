@@ -161,4 +161,7 @@
 # A10. [D]
 #      Ref Page 39  "The purpose of an input statement is to get some information from the user of a program and store it in a variable. Some programming languages have a special
 #      statement to do this. In Python, input is accomplished using an assignment statement combined with a built-in function called input."
-
+#
+# Discussion Exercises
+#
+#
