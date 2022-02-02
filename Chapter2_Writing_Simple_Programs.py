@@ -56,5 +56,109 @@
 #
 # Multiple Choice Questions
 #
-# Q1.
+#  Q1. Which of the following is not a step in the software development process?
+#     (a) specification     
+#     (b) testing/Debugging
+#     (c) fee setting       
+#     (d) maintenance
+#     
+# A1. [C]
+#
+#     Ref Page 50 The software development process involves the following steps:
+#     1. Problem Analysis
+#     2. Program Specification
+#     3. Design
+#     4. Implementation
+#     5. Testing/Debugging
+#     6. Maintenance
+
+#  Q2. What is the correct formula for converting Celsius to Fahrenheit? [A]
+#     (a) F = 9/5(C) + 32       
+#     (b) F = 5/9(C) - 32
+#     (c) F = B^2 - 4AC         
+#     (d) F = (212 - 32) / (100 - 0)
+#
+#
+# A2. Ref Page29 "She knows that 0 degrees Celsisus (freezing) is equal to 32 degreesFahrenheit. With this information, she computes the ratio of Fahrenheit to Celsius degrees 
+#     as (212-32)/(100-0) = 180/100 = 9/5. Using F to represent the Fahrenheit temperature and C for Celsius, the conversion formula will have the form F = (9/5)C + k for some 
+#     constant K. Plugging in 0 and 32 for C and F, respectively, Susan immediately sees that k = 32. So the final formula for the relationship is F = (9/5)C + 32."]
+
+#  Q3. The proces of describing exactly what a computer program will do to solve a problem is called
+#     (a) design     
+#     (b) implementation     
+#     (c) programming     
+#     (d) specification
+#     
+# A3. [D]    
+#     Ref page 50. "Program Specification: Deciding exactly what the program will do."]
+
+#  Q4. Which of the following is not a legal identifier?
+#     (a) spam     
+#     (b) spAm     
+#     (c) 2spam     
+#     (d) spam4U
+#
+# A4. [C]
+#     Ref Page 51 "Python has some rules about how identifiers are formed. Every identifier must begin with a letter or underscore (the "_" character) which may be followed by 
+#     any sequence of letters, digits, or underscores."]
+
+#  Q5. Which of the following are not used in expressions?
+#
+#     (a) variables     
+#     (b) statements     
+#     (c) operators    
+#     (d) literals
+#
+# A5. [B]      
+#     Ref page 32 "The simplest kind of expression is a literal." p.33: "A simple identifier can also be an expression. We use identifiers as variables to give names to values." p.32: 
+#     "More complex and interesting expressions can be constructed by combining simpler expressions with operators." p.523: "statement: A Single command in a programming 
+#      langauge."]
+
+#  Q6. Fragments of code that produce or calculate new data values are called
+#     a) identifiers            
+#     b) expressions
+#     c) productive clauses     
+#     d) assignemnt statements
+#
+# A6. [B]
+#     Ref Page 32 "The fragments of program code that produce or calculuate new data values are called expressions."
+
+#  Q7. Which of the following is not a part of the IPO pattern?
+#     a) input     
+#     b) program     
+#     c) process     
+#     d) output
+#
+# A7. [B]
+#    Ref Page 29 "...a standard pattern: Input, Process, Output (IPO)." As discussed in the previous chapter, a program is a specific set of instructions telling a computer 
+#    precisely what to do step by step.]
+
+#  Q8. The template for <variable> in range(<expr>) describes
+#     a) a general for loop     
+#     b) an assignment statement
+#     c) a flowchart            
+#     d) a counted loop 
+#
+# A8. [D]
+#     Ref Page 44 "This particular loop patter is called a counted loop.."
+
+#  Q9. Which of the following is the most accurate model of assignment in Python? [A}
+#     a) sticky-note     
+#     b) variable-as-box     
+#     c) simultaneous     
+#     d) plastic-scale
+#
+# A9. [A]
+#     Ref page 38 "The effect is like moving a sticky note from one object to another."
+#
+# Q10. In Python, getting user input is done with a special expression called [D]
+#     a) for     
+#     b) read     
+#     c) simulataneous assignment     
+#     d) input
+#
+# A10. [D]
+#
+#     Ref Page 39  "The purpose of an input statement is to get some information from the user of a program and store it in a variable. Some programming languages have a special
+#     statement to do this. In Python, input is accomplished using an assignment statement combined with a built-in function called input."
 
