@@ -72,14 +72,15 @@
 #     5. Testing/Debugging
 #     6. Maintenance
 
-#  Q2. What is the correct formula for converting Celsius to Fahrenheit? [A]
+#  Q2. What is the correct formula for converting Celsius to Fahrenheit?
 #     (a) F = 9/5(C) + 32       
 #     (b) F = 5/9(C) - 32
 #     (c) F = B^2 - 4AC         
 #     (d) F = (212 - 32) / (100 - 0)
 #
 #
-# A2. Ref Page29 "She knows that 0 degrees Celsisus (freezing) is equal to 32 degreesFahrenheit. With this information, she computes the ratio of Fahrenheit to Celsius degrees 
+# A2. [A]
+#     Ref Page29 "She knows that 0 degrees Celsisus (freezing) is equal to 32 degreesFahrenheit. With this information, she computes the ratio of Fahrenheit to Celsius degrees 
 #     as (212-32)/(100-0) = 180/100 = 9/5. Using F to represent the Fahrenheit temperature and C for Celsius, the conversion formula will have the form F = (9/5)C + k for some 
 #     constant K. Plugging in 0 and 32 for C and F, respectively, Susan immediately sees that k = 32. So the final formula for the relationship is F = (9/5)C + 32."]
 
@@ -158,7 +159,6 @@
 #     d) input
 #
 # A10. [D]
-#
-#     Ref Page 39  "The purpose of an input statement is to get some information from the user of a program and store it in a variable. Some programming languages have a special
-#     statement to do this. In Python, input is accomplished using an assignment statement combined with a built-in function called input."
+#      Ref Page 39  "The purpose of an input statement is to get some information from the user of a program and store it in a variable. Some programming languages have a special
+#      statement to do this. In Python, input is accomplished using an assignment statement combined with a built-in function called input."
 
