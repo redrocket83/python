@@ -180,5 +180,30 @@
 #     Underline each expression
 #     Put a comment at the end of each line indicating the type of statement on that line. E.g. Output, Assignment, Input, Loop etc
 #
+# File: chaos.py
+# A simple program illustrating chaotic behavior.
+
+def main():                                                # function definition
+    print("This program illustrates a chaotic funciton.")  # output statement
+    x = eval(input("Enter a number between 0 and 1: "))    # assignment statement wrapped around input statement
+    for i in range(10):                                    # loop statement
+        x = 3.9 * x * (1 - x)                              # expression
+        print(x)                                           # output statement
+#
+#   Identifiers: main(), print(), x, eval, input, for, i, in, range
+#
+# Q3. Explain the relationship between the concepts: definite loop, for loop and counted loop
+#
+# A3. A definite loop is the simplest kind of loop that will execute a definite number of times that is defined at the start of the loop.
+#
+#     A counted loop is a particular loop pattern. It is a common way to use a definite loop. It will go around the loop body according to a defined count or number of times.
+#     Example for i in range(10)
+#
+#     A for loop is a statement in Python that is used to implement a counted loop and has the form
+#     for <var> in <sequence>:
+#         <body>
+#
+# Q4. Show the output from the following fragments
 #
 #
+
