@@ -164,4 +164,21 @@
 #
 # Discussion Exercises
 #
+# Q1. List and describe in your own words, the six steps in the software development process
+#
+# A1. Problem Analysis = This first stage involvs analysing the problem you are trying to solve. Find as much information as possible
+#     Determine the specification = Write down exactly what you want your program to do. You don't need to worry about how you are going to program it at this point, you just 
+#     need to decide what it needs to accomplish
+#     Create a design = This is where you design the overall structure of the program so we can see how it is going to be worked out
+#     Implement the design = Implement the design as a Python program in code
+#     Test/Debug the program = Run the program and find any errors. Try debugging the errors to see where anything has gone wrong.
+#     Maintain the program = Sometimes programs need to be updated or enhanced which is part of the ongoing maintenance of programs.
+#
+# Q2. Write out the chaos.py program (Section 1.6) and identifiy parts of the program as follows
+#
+#     Circle each identifier
+#     Underline each expression
+#     Put a comment at the end of each line indicating the type of statement on that line. E.g. Output, Assignment, Input, Loop etc
+#
+#
 #
