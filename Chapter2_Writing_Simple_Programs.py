@@ -253,7 +253,7 @@ Hello---how are you?
 #
 # Q7. What do you think will happen when the following code is executed?
 #
-# A7. When range(0) is used, it does not calculate anything
+# A7. When range(0) is used, it does not calculate anything. # See Page 45 for more information
 #
 print("start")
 for i in range(0):
@@ -261,4 +261,38 @@ for i in range(0):
 print("end")
 start
 end
+#
+# Programming Exercises
+#
+# Q1. A user friendly program should put in an introduction tells the user what the program does.Modify the convert.py program to print an introduction.
+#
+# convert.py
+def main():
+    print("This is a program to convert the temperature in degrees Celsius and convert it to Fahrenheit")
+    celsius = eval(input("What is the Celsius temperature? "))
+    fahrenheit = 9/5 * celsius +32
+    print("The temperature is", fahrenheit, "degrees fahrenheit")
 
+main()
+#
+# Q2. On many systems with Python, it is posible to run a program by simply clicking (or double-clicking) on theicon of the program file. If you are able to run the convert.py 
+#     program this way, you may discover another usability issue. The program starts running in a new window, but as soon as the program is finished, the window disappears so 
+#     that you cannot read the results. Add an input statement at the end of the program so that it pauses to give the user a chance to read the results. Something like this 
+#     should work:
+#
+#     input("Press the <Enter> key to quit.")
+#
+# convert.py
+#     A program to convert Celsius temps to Fahrenheit by: Susan Computewell
+#
+def main():
+    
+    print("This program coverts a temperature in Celsius to a temperature in Fahrenheit.")
+    
+    celsius = eval(input("What is the Celsius temperature? "))
+    fahrenheit = 9/5 * celsius + 32
+    
+    print("The temperature is", fahrenheit, "degrees Fahrenheit.")
+    input("Press the <Enter> key to quit.")
+    
+main()
