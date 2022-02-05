@@ -464,4 +464,43 @@ main()
 # Q10. Write a program that converts distances measured in kilometers to miles. One kilometer is approximately 0.62
 #
 #
-   
+#This program will convert distances from kilometers to miles
+
+def main():
+    print("This is a program to convert kilometers to miles")
+    kilometers = eval(input("How many kilometers do you want to convert? "))
+    miles = kilometers * 0.62
+    print(kilometers, "kilometers is", miles, "miles")
+
+main()
+#
+# Q11. Write a program to perform a unit conversion of your own choosing. make sure that the program prints an introduction that explains what to do. 
+#
+# convert_litres_to_gallons.py
+#     A program to convert litres to gallons
+
+def main():
+    print("This program converts litres to gallons.")
+
+    gallons = eval(input("How many gallons?: "))
+    litres = gallons * .264172052
+
+    print("The fluid volume in litres is", litres, "litres.")
+
+main()
+#
+# Q12. Write an interactive Python calculator program. The program should allow the user to type a mathematical expression, and then print the value of the expression. Include a
+#      loop so that that the user can perform many calculations (say, up to 100). Note: To quit early, the user can make the program crash by typing a bad expression or simply 
+#      closing the window that the calculator program is running in. You'll learn better ways of terminating interactive programs in later chapters
+#
+# calculator.py
+# An interactive calculator (up to 100 expressions)
+
+def main():
+    print("Welcome to the Interactive Python Calculator")
+    for i in range(100):
+        result = eval(input(""))
+        print(result)
+
+main()
+
