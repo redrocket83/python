@@ -203,7 +203,21 @@ def main():                                                # function definition
 #     for <var> in <sequence>:
 #         <body>
 #
-# Q4. Show the output from the following fragments
+# Q4a. Show the output from the following fragments
 #
+for i in range(5):
+    print(i*i)
+0
+1
+4
+9
+16
+#  
+# Q4b. Show the output from the following fragments
+#
+for d in [3,1,4,1,5]:
+    print(d, end=" ") # The ‘end’ is an argument included in the ‘print’ function in Python. The default value for it is a newline ‘\n’ character. The ‘end’ specifies the 
+#    character or string that the print statement should end with.
+3 1 4 1 5 
 #
 
