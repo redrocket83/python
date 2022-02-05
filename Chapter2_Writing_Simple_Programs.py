@@ -220,4 +220,45 @@ for d in [3,1,4,1,5]:
 #    character or string that the print statement should end with.
 3 1 4 1 5 
 #
+# Q4c. Show the output from the following fragments
+#
+for i in range(4):
+    print("Hello")
+Hello
+Hello
+Hello
+Hello
+#
+# Q4d. Show the output from the following fragments
+#
+for i in range(3):
+    print(i, 2**i)
+0 1
+1 2
+2 4
+3 8
+4 16
+#
+# Q5. Why is it a good idea to first write out an algorithm in pseudocode rather than jumping immediately to Python code?
+#
+# A5. So you can get a good idea of what you want to do before starting so you don't overload yourself trying to code straightaway.
+#
+# Q6. The Python print function supports other keyboard parameters besides end. One of these other keyboard parameters is sep. What do you think the sep parameter does? 
+#     Hint: sep is short for separator. Test your idea either by trying it interactively or by consulting the Python documenation.
+#
+# A6. The sep parameter separates specifies the separator between multiple values when printing.
+#
+print("Hello", "how are you?", sep="---")
+Hello---how are you?
+#
+# Q7. What do you think will happen when the following code is executed?
+#
+# A7. When range(0) is used, it does not calculate anything
+#
+print("start")
+for i in range(0):
+    print("Hello")
+print("end")
+start
+end
 
