@@ -296,3 +296,50 @@ def main():
     input("Press the <Enter> key to quit.")
     
 main()
+#
+# Q3. Modify the avg2.py program (Section 5.2.3) to find the average of three exam scores
+#
+## avg3.py
+#   A simple program to average three exam scores  
+#   Illustrates use of multiple input
+#
+def main():
+    
+    print("This program computes the average of two exam scores.")
+
+    score1, score2, score3 = eval(input("Enter three scores separated by a comma: "))
+    average = (score1 + score2 + score3) / 3
+
+    print("The average of the three scores is:", average)
+
+main()
+#
+# Q4. Modify the convert.py program (Section 2.2) with a loop so that it executes 5 times before quitting. Each time through the loop, the program should get another temperature
+#     from the user and print a converted value
+#
+# convert.py
+#
+def main():
+    for i in range(5):
+        print("This is a program to convert the temperature in degrees Celsius and convert it to Fahrenheit")
+        celsius = eval(input("What is the Celsius temperature? "))
+        fahrenheit = 9/5 * celsius +32
+        print("The temperature is", fahrenheit, "degrees fahrenheit")
+
+main()
+#
+This is a program to convert the temperature in degrees Celsius and convert it to Fahrenheit
+What is the Celsius temperature? 10
+The temperature is 50.0 degrees fahrenheit
+This is a program to convert the temperature in degrees Celsius and convert it to Fahrenheit
+What is the Celsius temperature? 20
+The temperature is 68.0 degrees fahrenheit
+This is a program to convert the temperature in degrees Celsius and convert it to Fahrenheit
+What is the Celsius temperature? 10
+The temperature is 50.0 degrees fahrenheit
+This is a program to convert the temperature in degrees Celsius and convert it to Fahrenheit
+What is the Celsius temperature? 5
+The temperature is 41.0 degrees fahrenheit
+This is a program to convert the temperature in degrees Celsius and convert it to Fahrenheit
+What is the Celsius temperature? 4
+The temperature is 39.2 degrees fahrenheit
