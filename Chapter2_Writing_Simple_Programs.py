@@ -320,7 +320,7 @@ main()
 # convert.py
 #
 def main():
-    for i in range(5):
+    for i in range(5): #This line was added to make the program run 5 times
         print("This is a program to convert the temperature in degrees Celsius and convert it to Fahrenheit")
         celsius = eval(input("What is the Celsius temperature? "))
         fahrenheit = 9/5 * celsius +32
@@ -343,3 +343,125 @@ The temperature is 41.0 degrees fahrenheit
 This is a program to convert the temperature in degrees Celsius and convert it to Fahrenheit
 What is the Celsius temperature? 4
 The temperature is 39.2 degrees fahrenheit
+#
+# Q5. Modfiy the convert.py program (Section 2.2) so that it computes and prints a table of Celsius temperatures and the Fahrenheit equivalents every 10 degrees from 0 degress 
+#     celsius to 100 degrees celsius.
+#
+# convert.py
+#     Table of temperature conversions
+
+# Note: Table alignment is hacked here. Formatted output is covered in
+#       Chapter 5.
+
+def main():
+    print("Celsius  Fahrenheit")
+    print("-------------------")
+    print(" 0          32.0")
+    for celsius in [10,20,30,40,50,60,70,80,90]:
+        fahrenheit = 9.0 / 5.0 * celsius + 32
+        print(celsius, "        ", fahrenheit)
+    print("100         212.0")
+
+main()
+
+Celsius  Fahrenheit
+-------------------
+ 0          32.0
+10          50.0
+20          68.0
+30          86.0
+40          104.0
+50          122.0
+60          140.0
+70          158.0
+80          176.0
+90          194.0
+100         212.0
+#
+# Q6. Modify the futval.py program (Section 2.7) so that the number of years for the investment is also a user. input. Make sure to change the final message to reflect the correct 
+#     number of years.
+# 
+#   futvl.py
+#   Future value with number of years as an input.
+#
+def main():
+    print("This program calculates the future value of an investment.")
+    print()
+    
+    principal = eval(input("Enter the initial principal: "))
+    apr = eval(input("Enter the annualized interest rate: "))
+    years = eval(input("Enter the number of years: "))
+
+    for i in range(years):
+        principal = principal * (1 + apr)
+
+    print("The amount in", years, "years is:", principal)
+
+main(
+#
+# Q7. Suppose you have an investment plan where you invest a certain fixed amount every year. Modify futval.py to compute the total accumulation of your investment. The inputs
+#     to the program will be the amount to invest each year, the interest rate, and the number of years for the investment.
+#
+def main():
+    print("This program calculates the total future value")
+    print("of a multi-year investment with")
+    print("non-compounding interest and an additional")
+    print("investment of a certain fixed amount each year.")
+
+    principal = eval(input("Enter the initial principal: "))
+    apr = eval(input("Enter the annual interest rate: "))
+    yearlyinvestment = eval(input("Enter the fixed yearly amount to invest: "))
+    years = eval(input("Enter the number of years for the investment: "))
+          
+    for i in range(years):
+          principal = principal + yearlyinvestment
+          principal = principal * (1 + apr)
+
+    print("The value in ", years ,"years is:", principal, sep=" ")
+
+main()
+#
+#
+# Q8. As an alternative to APR, the interest accrued on an account is often described in terms of a nominal rate and the number of compounding periods. For example, if the 
+#    interest rate is 3% and the interest is compounded quarterly, the account actually earns .75% interest every 3 months.
+#
+#     Modify the futval.py program to use this method of entering the interest rate. The program should prompt the user for the yearly rate (rate) and the number of times that 
+#     the interest is compounded each year (periods). To compute the value in ten years, the program will loop 10 * periods times and accrue rate/period interest on each 
+#     iteration
+#
+# futval_modified.py    
+# Future value with multiple compounding periods
+
+def main():
+    print("This program calculates the future value of an investment.")
+    print()
+    
+    principal = eval(input("Enter the initial principal: "))
+    rate = eval(input("Enter the interest rate: "))
+    periods = eval(input("Enter the number of compounding periods per year: "))
+    years = eval(input("Enter the number of years: "))
+
+    for i in range(years * periods):
+        principal = principal * (1 + rate/periods)
+
+    print("The amount in", years, "years is:", principal)
+
+main()
+#
+# Q9. Write a program that converts temperatures from Fahenheit to Celcius
+#
+# convert.py
+#
+def main():
+    for i in range(5): #This line was added to make the program run 5 times
+        print("This is a program to convert the temperature in Fahrenheit and convert it to Celsius")
+        fahrenheit = eval(input("Please enter the Fahrenheit temperature: "))
+        celsius = (fahrenheit -32) * 5/9 
+        print("The temperature is", celsius, "degrees")
+
+main()
+#
+# Q10. Write a program that converts distances measured in kilometers to miles. One kilometer is approximately 0.62
+#
+#
+   
