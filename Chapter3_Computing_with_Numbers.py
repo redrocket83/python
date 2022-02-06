@@ -101,7 +101,9 @@
 # c) breaks the computer
 # d) uses more memory *
 #
+# Discussion Questions
 #
+# Q1. 
 
 
 
