@@ -83,7 +83,26 @@
 # c) both floats and ints to strings 
 # d) ints to floats *
 #
-# Q8. 
+# Q8. Which of the following is not a Python type conversion function?
+# a) float
+# b) round
+# c) int
+# d) abs *
+#
+# Q9. The pattern used to compute factorials is
+# a) accumulator *
+# b) input, process, output
+# c) counted loop
+# d) plaid *
+#
+# Q10. In modern Pythin, an int value that grows larger than the underlying hardware int
+# a) causes an overflow
+# b) converts to float
+# c) breaks the computer
+# d) uses more memory *
+#
+#
+
 
 
 
