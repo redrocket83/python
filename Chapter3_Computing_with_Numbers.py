@@ -103,7 +103,46 @@
 #
 # Discussion Questions
 #
-# Q1. 
+# Show the result of evaluating each expression. Be sure that the value is in the proper form to indicate its type (int or float). If the expression is illegal, explain why.
+#
+# Q1a) 4.0 / 10.0 + 3.5 * 2 = 7.4
+# Q1b) 10 % 4 + 6 / 2 = 5
+# Q1c) abs(4 - 20) // 3) ** 3 = 8
+# Q1d) sqrt(4.5 - 5.0) + 7 * 3 = illegal because sqrt cannot handle negative numbers
+# Q1e) 3 + 10 // 3 + 10 % 3 = 11
+# Q1f) 3 ** 3 = 27
+
+
+
+# Q1. Write a program to calculate the volume and surface area of a sphere fro its radius, given as input. Here are some formulas that might be useful
+# V = 4/3πr^3
+# A = 4πr^2
+#
+#This program will calculate the volume and surface area of a sphere from it's radius
+import math
+def main():
+    print("This is a program to calculate the volume and surface area of a sphere from it's radius")
+    radius =(eval(input("What is the radius? ")))
+    volume = round((4 / 3) * 3.142 *(radius ** 3),2)
+    area = round(4 * 3.142 * (radius * radius),2)
+    print("The volume of the sphere is", volume)
+    print("The surface area of sphere is", area)
+main()
+#
+# Q2. Write a program that calculates the cost per square inch of a cirular pizza, given its diameter and price. The formula for area is A = πr^2
+#
+#This program will calculate the cost per square inch of a pizza given its diameter and price
+def main():
+    print("This program will calculate the cost per square inch of a pizza given its diameter and price")
+    diameter = eval(input("What is the diameter of the pizza? "))
+    cost = eval(input("What is the cost of the pizza? "))
+    radius = diameter / 2
+    area = round(3.142 * (radius * radius),2)
+    print("The cost per square inch of the pizza is", round((cost/area), 2))
+main()
+#
+# Q3. 
+
 
 
 
