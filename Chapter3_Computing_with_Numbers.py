@@ -109,8 +109,16 @@
 # Q1b) 10 % 4 + 6 / 2 = 5
 # Q1c) abs(4 - 20) // 3) ** 3 = 8
 # Q1d) sqrt(4.5 - 5.0) + 7 * 3 = illegal because sqrt cannot handle negative numbers
-# Q1e) 3 + 10 // 3 + 10 % 3 = 11
+# Q1e) 3 * 10 // 3 + 10 % 3 = 10 (10 // 3) = 3 and (10 % 3) = 1 so 3 x 3 + 1
 # Q1f) 3 ** 3 = 27
+#
+#  Translate each of the following mathematical expressions into an equivalent Python expression. You may assume that the math library has been imported (via import math).
+#
+# Q2a) (3 + 4) * 5
+# Q2b) (n(n-1) / 2          
+# Q2c) 4 * math.pi * r**2                       
+# Q2d) math.sqrt(r * math.cos(a)**2 + r * math.sin(b)**2)
+# Q2e) (y2 - y1) / (x2 - x1)
 
 
 
