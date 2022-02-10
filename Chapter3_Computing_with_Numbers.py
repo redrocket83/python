@@ -177,8 +177,22 @@ for i in range(1,11):
     ans = ans + i*i
     print(i)
 print(ans)
-
-
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+385
+#
+# Q5. What do you think will happen if you use a negative number as the second parameter in the round function? For example, what should be the result of round(314.159265, -1)? 
+#     Explain the rational for your answer. After you've written your answer, consult the Python documentation or try out some examples to see what Python actually does in this 
+#     case
+#
 # Programming Exercises
 #
 # Q1. Write a program to calculate the volume and surface area of a sphere fro its radius, given as input. Here are some formulas that might be useful
