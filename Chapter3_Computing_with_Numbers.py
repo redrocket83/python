@@ -206,6 +206,9 @@ print(round(314.159265, -1))
 # Q6d) 10 % -3 = -2
 # Q6e) -10 // -3 = 3
 #
+# Example explanation - For -6 // 4, first the result of -6 / 4 is calculated, so -1.5. Flooring then moves to the lower integer value, so -2.
+# https://www.pythontutorial.net/advanced-python/python-floor-division/
+#
 # Programming Exercises
 #
 # Q1. Write a program to calculate the volume and surface area of a sphere fro its radius, given as input. Here are some formulas that might be useful
