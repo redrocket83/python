@@ -192,6 +192,19 @@ print(ans)
 # Q5. What do you think will happen if you use a negative number as the second parameter in the round function? For example, what should be the result of round(314.159265, -1)? 
 #     Explain the rational for your answer. After you've written your answer, consult the Python documentation or try out some examples to see what Python actually does in this 
 #     case
+print(round(314.159265, -1))
+310
+#
+# A5. It rounded the value up to the nearest 10- https://www.pythontutorial.net/advanced-python/python-rounding/
+#
+# Q6.  What do you think will happen when the operands to the integer division or remainder operations are negative? Consider each of the following cases and try to predict the
+#      results. Then try them out in Python. Hint: Recall the magic formula a = (a//b)(b) + (a%b).
+#
+# Q6a) -10 // 3 = -4
+# Q6b) -10 % 3 = 2
+# Q6c) 10 // -3 = -4
+# Q6d) 10 % -3 = -2
+# Q6e) -10 // -3 = 3
 #
 # Programming Exercises
 #
