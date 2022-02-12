@@ -249,9 +249,125 @@ main()
 #      C         12.0107
 #      O         15.9994
 #     For example, the molecular weight of water (H20) is 2(1.00794) + 15.9994 = 18.01528.
+#
+# A program to calculate the molecular weight of a carbohydrate (in grams per mole based on the number of hydrogen, carbon and oxygen atoms in the molecule
+# Prompt the user to input the numbers of hydrogen, carbon and oxygen atoms
+#
+def main():
+    hydrogen = eval(input("How many hydrogen atoms are there? "))
+    carbon = eval(input("How many carbon atoms are there? "))
+    oxygen = eval(input("How many oxygen atoms are there? "))
 
+    weight = round((hydrogen * 1.00794) + (carbon * 12.0107) + (oxygen * 15.9994),2)
+    print("The molecular weight of the carbohydrate is", weight, "grams/mole")
 
+main()
+#  Q4. Write a program that determines the distance to a lightning strike based on the time elapsed between the flash and the sound of thunder.
+#      The speed of sound is approximately 1100 ft/sec and 1 mile is 5280 ft.
+#
+# A program which determines the distance to a lightning strike based on the time elapsed between the flash and sound of thunder
 
+# Speed of sound is 1100ft/s
+# 1 mile is 5280ft
+# distance = speed x time
 
+def main():
+    time = eval(input("Please input the time in seconds between the flash and sound of thunder: "))
+    distance = round((time * 1100) /5280, 2)
+    print("The distance to a lightning strike is", distance, "miles away")
 
+main()
+#
+#  Q5. The Konidtorei coffee shop sells coffee at $10.50 a pound plus the cost of shipping. Each order ships for $.086 per pound + $1.50 fixed cost
+#      for overhead. Write a program that calculates the cost of an order
+#
+# Program to calculate the cost of a coffee order
+def main():
+    coffee = eval(input("How many pounds of coffee would you like? "))
+    coffeecost = coffee * 0.86
+    overhead = 1.50
+    total = coffeecost + overhead
+    print("The total cost of the coffee is",total)
+
+main()
+#
+#  Q6. Two points in a plane are specified using the coordinates (x1,y1) and (x2,y2). Write a program that calculates the slope of a line through
+#      two (non-vertical) points entered by the user.
+#      slope = (y2 - y1) / (x2 - x1
+#
+def main():
+    print("This program calculates the slope of a line through 2 points.")
+    print()
+    ptx1, pty1 = eval(input("Input the first x and y point separated by a comma "))
+    ptx2, pty2 = eval(input("Input the second x and y point separated by a comma "))
+    slopey = pty2 - pty1
+    slopex = ptx2 - ptx1
+
+    print("The slope is", slopey, '/', slopex)
+
+main()
+#
+#  Q7. Write a program that accepts two points (see previous problem) and determins the distance between them.
+#      distances = sqrt((x2-x1)^2 + (y2-y1)^2)
+#
+# A program to calculate the distance between 2 points
+# distance = square root of (x2-x1) squared + (y2-y1) squared
+#
+def main():
+    v1 = eval(input("Please enter a value for x1: "))
+    v2 = eval(input("Please enter a value for x2: "))
+    y1 = eval(input("Please enter a value for y1: "))
+    y2 = eval(input("Please enter a value for y2: "))      
+    distance = math.sqrt(((v2-v2)**2) + ((y2-y1)**2))
+    print(distance)
+
+main()
+#
+#  Q8. The Gregorian epact is the number of days between Janaury 1st and the previous new moon. This value is used to figure out the date of Easter.
+#      It is calculated by these formulas (using int arithmetic):
+#      C = year//100
+#      epact = (8 + (C//4) - C + ((8C + 13)//25) + 11(year%19))%30
+#
+#This program prompts the user for a 4 digit year and then outputs the value of the epact
+#
+def main():
+    year = eval(input("Please enter a 4 digit year: "))
+    c = year//100
+    epact =(8 + (c//4) - c + ((8*c +13)//25) + 11*(year%19))%30
+    print("The number of days between January 1st and the previous new moon is", epact)
+
+main()
+#
+#  Q9. Write a program to calculate the area of a triangle given the length of its three sides--a, b, and c--using these formulas:
+#      s = (a + b + c) / 2
+#      A = sqrt(s(s - a)(s - b)(s - c))
+#
+#Write a program to calculate the area of a triangle given the length of its 3 sides
+import math
+def main():
+    a = eval(input("Please enter a length for side a: "))
+    b = eval(input("Please enter a length for side b: "))
+    c = eval(input("Please enter a length for side c: "))
+    s = (a + b + c) / 2
+    a = math.sqrt(s * ((s-a) * (s-b) *(s-c)))
+    print("The area of a triangle is", a)
+
+main()
+#
+# 10. Write a program to determine the length of a ladder required to reach a given height when leaned against a house. The height and angle of the
+#     ladder are given as inputs. To compute length use:
+#     length = height / sin angle
+#     Note: The angle must be in radians. Prompt for an angle in degrees and use this formula to convert:
+#     radians = (pi / 180) degrees
+#
+# A program to determine the length of a ladder required to reach a given height when leaned against a house
+import math
+def main():
+    height = eval(input("Please input the height: "))
+    angle = eval(input("Please enter the angle of the ladder: "))
+    rad = (math.pi/180) * angle
+    length = round(height / (math.sin(rad)), 2)
+    print("The length of a ladder required is", length)
+
+main()
 
