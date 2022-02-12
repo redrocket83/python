@@ -370,4 +370,15 @@ def main():
     print("The length of a ladder required is", length)
 
 main()
+#
+# Q11. Write a program to find the sum of the first n natural numbers where the value of n is provided by the user
 
+def main():
+    print("This program finds the sum of the first 'n' natural numbers")
+    print("starting with 0")
+    n = eval(input("Enter any natural number "))
+    add = 0
+    for i in range (n):
+        add = add + i
+    print(add)
+main()
