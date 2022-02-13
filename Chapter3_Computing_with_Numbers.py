@@ -439,8 +439,77 @@ def main():
 main()
 #
 # Q15. Write a program that approximates the value of pi by summing the terms of this series:
-#      4/1 - 4/3 + 4/5 = 4/7 + 4/9 - 4/11 + ...
+#      4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11 + ...
 #      The program should prompt the user for n, the number of terms to sum, and then output the sum of the first n terms of this series. Have your
 #      program subtrac the approximation from the value of math.pi to see how accurate it is.
 #
+#    Approximation of pi using Taylor series.
 
+import math
+
+def main():
+    print("This program approximates the value of pi by summing a fixed")
+    print("number of terms in a series.")
+    print()
+    
+    n = int(input("How many terms should I use? "))
+
+    total = 0.0
+    sgn = 1.0   # used to alternate sign of terms
+    for denom in range(1, 2*n, 2):
+        total = total + sgn * 4.0/denom
+        sgn = -sgn #flip the sign
+
+    print("Approximation to pi is:", total)
+    print("Difference from math.pi:", math.pi - total)
+
+main()
+#
+# Q16. A Fibnoacci sequence is a sequence of numbers where each successive number is the sum of the previous two. The classic Fibonacii sequence
+#      begins: 1, 1, 2, 3, 5, 8, 13 ... . Write a program that computes the nth Fibonacci number where n is a value input by the user. For example,
+#      if n = 6, then the result is 8.
+#
+def main():
+    a = 0
+    b = 1
+    n = eval(input("Enter the number you want to find the Fibonnacci number for: "))
+    if n == 1:
+        print(a)
+    else:
+        print(a)
+        print(b)
+        for i in range(2,n):
+            c = a + b
+            a = b
+            b = c
+            print(c)
+main()
+#
+# Q17. You have seen that the math library contains a function that computes the square root of numbers. In this exercise, you are to write your own
+#      algorithm for computing square roots. One way to solve this problem is to use a guess-and-check approach. You first guess what the square root
+#      might be, and then you see how close your guess is. You can use this information to make another guess and continue guessing until you have
+#      found the square root (or a close approximation to it). One particularly good way of making guesses is to use Newton's method.
+#      Suppose x is the number we want the root of, and guess is the current guessed answer.
+#      The guess can be improved by using computing the next guess as:
+#      (guess + (x / guess)) / 2.
+#
+#    Square root using Newton's method.
+
+import math
+
+def main():
+    print("This program calculates square root using Newton's method.")
+    print()
+
+    x = float(input("Enter number to find the root of: "))
+    n = int(input("How many iterations should I use? "))
+
+    guess = x / 2.0
+    for i in range(n):
+        guess = (guess + x/guess)/2.0
+
+    print()
+    print("Approximate square root:", guess)
+    print("Difference from math.sqrt:", math.sqrt(x) - guess)
+
+main()
