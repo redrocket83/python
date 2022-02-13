@@ -382,3 +382,65 @@ def main():
         add = add + i
     print(add)
 main()
+#
+# Q12. Write a program to find the sum of the cubes of the first n natural numbers where the value of n is provided by the user.
+#
+# Python program for finding the sum of the cubes of first N natural numbers
+#
+# Getting input from users
+N = int(input("Enter value of N: "))
+
+# Calculating the sum of the cubes 
+sumVal = 0
+for i in range(1, N+1):
+    sumVal += (i*i*i)
+
+print("Sum of cubes = ", sumVal)
+#
+# Q13. Write a program to sum a series of numbers entered by the user. The program should first prompt the user for how many numbers are to be summed.
+#     The program should then prompt the user for each of the numbers in turn and print out a total sum after all the numbers have been entered.
+#     Hint: Use an input statement in the body of the loop.
+#
+# This program sums a series of numbers entered by the user. The program will prompt the user for for how many numbers
+# are to be summed. The program should then prompt the user for each of the numbers in turn and print out a total number
+
+# The Python += operator adds two values together and assigns the final value to a variable. This operator is called the addition assignment operator.
+# This operator is often used to add values to a counter variable that tracks how many times something has happened.
+# https://careerkarma.com/blog/python-operator/
+
+# When you use the addition assignment operator, two numbers will be added. The resultant value will be assigned to a variable.
+
+def main():
+    total = 0
+    totalnum = eval(input("How many numbers do you want to sum?  "))
+    for i in range(totalnum):
+        number = eval(input("Input the number? "))
+        total += number
+    print("The total value of your ", totalnum, "numbers is", total)
+
+main()
+#
+# Q14. Write a program that finds the average of a series of numbers entered by the user. As in the previous problem, the program will first ask the
+#      user how many numbers there are. Note: The average should always be a float, even if the user inputs are all ints.
+#
+# This program that finds the average of a series of numbers entered by the user
+# The program will aks the user how many numbers there are
+# The average should always be a float
+
+def main():
+    total = 0
+    totalnum = eval(input("How many numbers do you want to sum?  "))
+    for i in range(totalnum):
+        number = float(input("What's the first number? "))
+        total += number
+        average = total / totalnum
+    print("The average of your ", totalnum, "numbers is", average)
+
+main()
+#
+# Q15. Write a program that approximates the value of pi by summing the terms of this series:
+#      4/1 - 4/3 + 4/5 = 4/7 + 4/9 - 4/11 + ...
+#      The program should prompt the user for n, the number of terms to sum, and then output the sum of the first n terms of this series. Have your
+#      program subtrac the approximation from the value of math.pi to see how accurate it is.
+#
+
