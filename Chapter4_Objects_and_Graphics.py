@@ -101,23 +101,25 @@
 #
 # Discussion
 #
-#  Q1. Pick an example of an interesting real-world object and describe it as a programming object by listing its data (attributes, what it "knows") and its methods 
+# Q1. Pick an example of an interesting real-world object and describe it as a programming object by listing its data (attributes, what it "knows") and its methods 
 #     (behaviors, what it can "do").
-#  A1. Objects are key to understanding object-oriented technology. You can look around you now and see many examples of real-world objects: your dog, your desk, your television
-#      set, your bicycle. These real-world objects share two characteristics: They all have state and behavior. 
-#      For example, dogs have state (name, color, breed, hungry) and behavior (barking, fetching, and wagging tail). 
-#      Bicycles have state (current gear, current pedal cadence, two wheels, number of gears) and behavior (braking, accelerating, slowing down, changing gears).
+# A1. Objects are key to understanding object-oriented technology. You can look around you now and see many examples of real-world objects: your dog, your desk, your television
+#     set, your bicycle. These real-world objects share two characteristics: They all have state and behavior. 
+#     For example, dogs have state (name, color, breed, hungry) and behavior (barking, fetching, and wagging tail). 
+#     Bicycles have state (current gear, current pedal cadence, two wheels, number of gears) and behavior (braking, accelerating, slowing down, changing gears).
 #
-#  Q2. Describe in your own words the object produced by each of the following operations from the graphics module. Be as precise as you can. Be sure to mention such things 
-#      as the size, position, and appearance of the various objects. You may include a sketch if that helps.
+# Q2. Describe in your own words the object produced by each of the following operations from the graphics module. Be as precise as you can. Be sure to mention such things 
+#     as the size, position, and appearance of the various objects. You may include a sketch if that helps.
 #
-#     a) Point(130, 130)
-#        Constructs a point at x coordinate 130 and y coordinate 130, with 0,0 being located at upper left hand corner.
+# Q2a) Point(130, 130)
+
+# A2a) Constructs a point at x coordinate 130 and y coordinate 130, with 0,0 being located at upper left hand corner. Page 88
 #
-#     b) c = Circle(Point(30,40), 25)
+# Q2b) c = Circle(Point(30,40), 25)
 #        c.setFill("blue")
 #        c.setOutline("red")
 #
+# A2b) 
 #     c) r = Rectangle(Point(20,20), Point(40,40))
 #        r.setFill(color_rgb(0,255,150)
 #        r.setWidth(3)
