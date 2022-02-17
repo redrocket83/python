@@ -116,27 +116,39 @@
 # A2a) Constructs a point at x coordinate 130 and y coordinate 130, with 0,0 being located at upper left hand corner. Page 88
 #
 # Q2b) c = Circle(Point(30,40), 25)
-#        c.setFill("blue")
-#        c.setOutline("red")
+#          c.setFill("blue")
+#          c.setOutline("red")
 #
-# A2b) 
-#     c) r = Rectangle(Point(20,20), Point(40,40))
-#        r.setFill(color_rgb(0,255,150)
-#        r.setWidth(3)
+# A2b) A blue circle with a red outline centered at (30,40) with a radius of 25
 #
-#     d) l = Line(Point(100,100), Point(100,200))
-#        l.setOutline("red4")
-#        l.setArrow("first")
-
-#     e) Oval(Point(50,50), Point(60,100))
-
-#     f) shape = Polygon(Point(5,5), Point(10,10), Point(5,10), Point(10,5))
-#        shape.setFill("orange")
-
-#     g) t = Text(Point(100,100), "Hello World!")
-#        t.setFace("courier")
-#        t.setSize(16)
-#        t.setStyle("italic")
-
+# Q2c) r = Rectangle(Point(20,20), Point(40,40))
+#          r.setFill(color_rgb(0,255,150)
+#          r.setWidth(3)
+#
+# A2c) A square 20 units on each side centered. The fill colouris greenish blue and the outline is 3 pixels wide and black.
+#
+# Q2d) l = Line(Point(100,100), Point(100,200))
+#          l.setOutline("red4")
+#          l.setArrow("first")
+#
+# A2d) A vertical dark red line of length 100, with its bottom at point (100,200) and an arrow pointing up at the upper end.
+#
+# Q2e) Oval(Point(50,50), Point(60,100))
+#
+# A2e) An unfilled vertical oval
+#
+# Q2f) shape = Polygon(Point(5,5), Point(10,10), Point(5,10), Point(10,5))
+#      shape.setFill("orange")
+#
+# A2f) An orange something! My program did not work well with this!
+#
+# Q2g) t = Text(Point(100,100), "Hello World!")
+#          t.setFace("courier")
+#          t.setSize(16)
+#          t.setStyle("italic")
+#          t.draw(win)
+#
+# A2g) The words "Hello World!" centered at (100,100), displayed in an italic size 16 courier font/
+#
 #  3.  Describe what happens when the following interactive graphics program runs:
 
