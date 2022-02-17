@@ -108,5 +108,33 @@
 #      For example, dogs have state (name, color, breed, hungry) and behavior (barking, fetching, and wagging tail). 
 #      Bicycles have state (current gear, current pedal cadence, two wheels, number of gears) and behavior (braking, accelerating, slowing down, changing gears).
 #
+#  Q2. Describe in your own words the object produced by each of the following operations from the graphics module. Be as precise as you can. Be sure to mention such things 
+#      as the size, position, and appearance of the various objects. You may include a sketch if that helps.
 #
+#     a) Point(130, 130)
+#        Constructs a point at x coordinate 130 and y coordinate 130, with 0,0 being located at upper left hand corner.
+#
+#     b) c = Circle(Point(30,40), 25)
+#        c.setFill("blue")
+#        c.setOutline("red")
+#
+#     c) r = Rectangle(Point(20,20), Point(40,40))
+#        r.setFill(color_rgb(0,255,150)
+#        r.setWidth(3)
+#
+#     d) l = Line(Point(100,100), Point(100,200))
+#        l.setOutline("red4")
+#        l.setArrow("first")
+
+#     e) Oval(Point(50,50), Point(60,100))
+
+#     f) shape = Polygon(Point(5,5), Point(10,10), Point(5,10), Point(10,5))
+#        shape.setFill("orange")
+
+#     g) t = Text(Point(100,100), "Hello World!")
+#        t.setFace("courier")
+#        t.setSize(16)
+#        t.setStyle("italic")
+
+#  3.  Describe what happens when the following interactive graphics program runs:
 
