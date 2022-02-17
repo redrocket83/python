@@ -168,7 +168,7 @@
                                             # difference along the x axis of the user's mouse click with respect to the center point of shape
                dy = p.getY() - c.get&()     # Assignment statement whereby variable dy is assigned a similar expression as dx, except this time it is for the Y axis
                shape.move(dx, dy)           # Calls the move() method of shape to move shape by the x distance referred to by dx and the y distance referred to by dy, thus
-                                            # changing the state of shape by moving its center point to the new coordinates encapsulated in the event object p
+                                            # Moves the red circle shape moving its center point to the new coordinates encapsulated in the event object p
           win.close()                       # Calls the close() method of the Graphics Window variable win, closing the graphics window after the loop is finished.
                                             # Note that it will not be possible to see the final location of the circle. To do so, comment out win.close() or call on win's
                                             # getMouse() method to make win close after a mouse click.
