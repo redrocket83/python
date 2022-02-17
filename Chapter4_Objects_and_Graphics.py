@@ -63,14 +63,50 @@
 #     c) win.setCoords(0,0, 10,10) *       
 #     d) win.setcoords(Point(10,10),Point(0,0))
 #
-#  5. What expression would create a line from (2,3) to (4,5)?
+#  5. What expression would create a line from (2,3) to (4,5)? [D]
+#     a) Line(2, 3, 4, 5)
+#     b) Line((2, 3), (4, 5))
+#     c) line(2, 4, 3, 5)
+#     d) Line(Point(2,3), Point(4,5)) * Page 90 for example
+#
+#  6. What command would be used to draw the graphics object shape into the graphics window win? [D]
+#     a) win.draw(shape)
+#     b) win.show(shape)
+#     c) shape.draw()
+#     d) shape.draw(win) * Pge 115 for ref
 
-#  6. What command would be used to draw the graphics object shape into the graphics window win?
+#  7. Which of the following computes the horizontal distance between points p1 and p2? [D]
+#     a) abs(p1-p2)
+#     b) p2.getX() - p1.getX()
+#     c) abs(p1.getY() - p2.getY())
+#     d) abs(p1.getX() - p2.getX()) *
 
-#  7. Which of the following computes the horizontal distance between points p1 and p2?
+#  8. What kind of ojbect can be used to get text input in a graphics window? [B]
+#     a) Text
+#     b) Entry *
+#     c) Input
+#     d) Keyboard
 
-#  8. What kind of ojbect can be used to get text input in a graphics window?
+#  9. A user interface organized around visual elements and user actions is called a(n) [A]
+#     a) GUI *
+#     b) Application
+#     c) Windower
+#     d) API
 
-#  9. A user interface organized around visual elements and user actions is called a(n)
+# 10. What color is color_rgb(0,255,255)? [B] red green blue
+#     a) Yello
+#     b) Cyan * Page 121
+#     c) Magenta
+#     d) Orange
+#
+# Discussion
+#
+#  Q1. Pick an example of an interesting real-world object and describe it as a programming object by listing its data (attributes, what it "knows") and its methods 
+#     (behaviors, what it can "do").
+#  A1. Objects are key to understanding object-oriented technology. You can look around you now and see many examples of real-world objects: your dog, your desk, your television
+#      set, your bicycle. These real-world objects share two characteristics: They all have state and behavior. 
+#      For example, dogs have state (name, color, breed, hungry) and behavior (barking, fetching, and wagging tail). 
+#      Bicycles have state (current gear, current pedal cadence, two wheels, number of gears) and behavior (braking, accelerating, slowing down, changing gears).
+#
+#
 
-# 10. What color is color_rgb(0,255,255)?
