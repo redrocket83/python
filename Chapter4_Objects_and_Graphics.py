@@ -176,3 +176,28 @@
 
 # Programming Exercises
 #
+# Q1a) Alter the previous program to draw squares rather than circles
+#
+# Programming Exercises
+# Constructs a rectangle - Rectangle(point1), point2) having opposite corners at Point1 and Point2
+import graphics
+from graphics import *
+
+def main():
+    win = GraphWin()
+    shape = Rectangle(Point(50,50), Point(100,100))
+    shape.setOutline("red")
+    shape.setFill("red")
+    shape.draw(win)
+    for i in range(10):
+        p = win.getMouse()
+        c = shape.getCenter()
+        dx = p.getX() - c.getX()
+        dy = p.getY() - c.getY()
+        shape.move(dx,dy)
+    win.close
+main()
+#
+# Q1b) Have each sucessive click draw an additional square on the screen (rather than moving the existing one).
+#
+
