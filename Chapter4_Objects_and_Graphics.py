@@ -150,7 +150,7 @@
 #
 # A2g) The words "Hello World!" centered at (100,100), displayed in an italic size 16 courier font/
 #
-#  3.  Describe what happens when the following interactive graphics program runs:
+#  Q3.  Describe what happens when the following interactive graphics program runs:
 #
        from graphics import *
 
@@ -198,6 +198,92 @@ def main():
     win.close
 main()
 #
-# Q1b) Have each sucessive click draw an additional square on the screen (rather than moving the existing one).
+# Q1b) Have each successive click draw an additional square on the screen (rather than moving the existing one).
 #
+# Programming Exercises
+# Constructs a rectangle - Rectangle(point1), point2) having opposite corners at Point1 and Point2
+import graphics
+from graphics import *
 
+def main():
+    win = GraphWin()
+    shape = Rectangle(Point(40,40), Point(60,60))
+    shape.setOutline("red")
+    shape.setFill("red")
+    shape.draw(win)
+    for i in range(10):
+        p = win.getMouse()
+        c = shape.getCenter()
+        dx = p.getX() - c.getX()
+        dy = p.getY() - c.getY()
+        shape = shape.clone()
+        shape.move(dx,dy)
+        shape.draw(win)
+    win.getMouse()
+    win.close()
+
+main()
+#
+# Q1c Print a message on the window "Click again to quit" after the loop, and wait for a final click before closing the window. Insert immediately before win.close():
+#
+# Programming Exercises
+# Constructs a rectangle - Rectangle(point1), point2) having opposite corners at Point1 and Point2
+import graphics
+from graphics import *
+
+def main():
+    win = GraphWin()
+    shape = Rectangle(Point(40,40), Point(60,60))
+    shape.setOutline("red")
+    shape.setFill("red")
+    shape.draw(win)
+    for i in range(10):
+        p = win.getMouse()
+        c = shape.getCenter()
+        dx = p.getX() - c.getX()
+        dy = p.getY() - c.getY()
+        shape = shape.clone()
+        shape.move(dx,dy)
+        shape.draw(win)
+    Text(Point(100,180), "Click again to quit.").draw(win)
+    win.getMouse()
+    win.close()
+
+main()
+#
+# Q2) An archery target consists of a central circle of yellow surrounded by concentric rings of red, bue, black and white. Each ring has the same width, which is the same as 
+#     the radius of the yellow circle. Write a program that draws such a target.
+#     Hint: Objects drawn later will appear on top of objects drawn earlier
+#
+# Archery target
+import graphics
+from graphics import *
+
+def main():
+    win = GraphWin("Archery Target", 300,300)
+    center = Point(150,150)
+                   
+    whitecircle = Circle(center, 100)
+    whitecircle.setFill("white")
+    whitecircle.draw(win)
+
+    blackcircle = Circle(center, 80)
+    blackcircle.setFill("black")
+    blackcircle.draw(win)
+
+    bluecircle = Circle(center, 60)
+    bluecircle.setFill("blue")
+    bluecircle.draw(win)
+
+    redcircle = Circle(center, 40)
+    redcircle.setFill("red")
+    redcircle.draw(win)
+
+    yellowcircle = Circle(center, 20)
+    yellowcircle.setFill("yellow")
+    yellowcircle.draw(win)
+
+    win.getMouse() # pause for click in window
+    win.close()
+
+main(
