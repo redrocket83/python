@@ -283,7 +283,7 @@ def main():
     yellowcircle.setFill("yellow")
     yellowcircle.draw(win)
 
-    win.getMouse() # pause for click in window
+    win.getMouse() # Pauses the window so you can see the target
     win.close()
 
-main(
+main()
