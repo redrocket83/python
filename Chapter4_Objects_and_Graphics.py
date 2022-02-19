@@ -834,7 +834,67 @@ def main():
     win.getMouse() # pause for click in window
 
 main()
+#
+# Q11) Five-click House.
+#     You are to write a program that allows the user to draw a simple house using five mouse clicks. The fisrt two clicks will be the opposite
+#     corners of the rectangular frame of the house. The third click will indicate the center of the otp ege of a rectangular door. The door should
+#     have a total width that is 1/5 the wdith of the house frame. The sides of the door should have extend from the corners of the top down to the
+#     bottom of the frame. The fourth click will indicate the center of a square window. The window is half as wide as the door. The last click will
+#     indicate the peak of the roof. The edges of the roof will extend from the point at the peak to the corners of the top edge of the house frame.
+#
+#This program draws a simple house using 5 mouse clicks
 
+from graphics import *
+
+from math import *
+
+def main():
+    
+    win = GraphWin("Drawing a simple house in 5 mouse clicks", 400,400)
+    win.setCoords(0, 0, 20, 20)
+
+    #Store the co-ordinates of the 2 mouse clicks to create the rectangle house
+    point1 = win.getMouse()
+    point2 = win.getMouse()
+    x1 = point1.getX()
+    y1 = point1.getY()
+    x2 = point2.getX()
+    y2 = point2.getY()
+
+    #Create a rectangle
+    rectangle = Rectangle(point1, point2)
+    rectangle.draw(win)
+
+    # For the third click, this will show the center of the top of the door
+    point3 = win.getMouse()
+    x3 = point3.getX()
+    y3 = point3.getY()
+
+    #Door width
+    rectangle_width = x2 -x1
+    door = Rectangle(Point(x3 - (1/5 * rectangle_width), y1), Point(x3 + (1/5 * rectangle_width),y3))
+    door.draw(win)
+
+    #For the fourth click, we will print a square window
+    point4 = win.getMouse()
+    x4 = point4.getX()
+    y4 = point4.getY()
+    #window is 1/2 width of the door
+    window_width = 1/20 * rectangle_width
+    window = Rectangle(Point((x4-window_width), (y4-window_width)), Point((x4+window_width), (y4+window_width)))
+    window.draw(win)
+
+    #For the fifth click
+    point5 = win.getMouse()
+    line1 = Line(point2, point5)
+    line1.draw(win)
+    line2 = Line(point5, Point(x1, y2))
+    line2.draw(win)
+
+    win.getMouse() # pause for click in window
+
+main()
+    
     
 
     
