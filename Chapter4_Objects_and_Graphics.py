@@ -663,6 +663,178 @@ def main():
     win.close()
 
 main()
+#
+# Q8) Line Segment Information.
+#     This program allows the suer to draw a line segment that then displays some graphical and textual information about the line segment.
+#     Input: Two mouse clicks for the end points of the line segment.
+#     Output: Draw the midpoint of the segment in cyan.
+#             Draw the line.
+#             Print the length and the slope of the line.
+#     Formulas: dx = x2 - x1
+#               dy = y2 - y1
+#               slope = dy / dx
+#               length = sqrt(dx^2 + dy^2)
+#
+#This program allows the user to draw a line segment and then displays some graphical and textual information about the line inpit
+#https://github.com/drypycode/zelle-python/blob/master/chap04/exercise_8.py
+
+from graphics import *
+from math import * # You can also do import math
+
+def main():
+    win = GraphWin("Line drawing tool", 400, 400)
+    win.setCoords(-10, -10, 10, 10)
+
+    #Prompt the user for 2 mouse clicks
+    message = Text(Point(0, 8), "Click on 2 points to create a line")
+    message.setFill("blue")
+    message.draw(win)
+
+    #Store the co-ordinates in variables x1 and x2
+    point1 = win.getMouse()
+    point2 = win.getMouse()
+    x1 = point1.getX()
+    x2 = point2.getX()
+    y1 = point1.getY()
+    y2 = point2.getY()
+    print(x1)
+    print(x2)
+    print(y1)
+    print(y2)
+
+    #Create a line with midpoint as "cyan"
+    line = Line(point1,point2)
+    line.draw(win)
+    mx = (x1+x2)/2
+    my = (y1+y2)/2
+    print(mx)
+    print(my)
+    win.plot(mx, my, "green")
+
+    #Print the length and slope of the line
+    dx = x2 - x1
+    dy = y2 - y1
+    slope = dy /dx
+    print("The slope of the slope is: ", round(slope,2))
+    message2 = Text(Point(0, -6), ("The slope of the line is: ", round(slope,2)))
+    message2.draw(win)
+    #Print the length of the line
+    length = sqrt(dx**2 + dy**2)
+    print("The length of the line is", round(length, 2))
+    message3 = Text(Point(0, -3), ("The slope of the line is: ", round(slope,2)))
+    message3.draw(win)
+main()
+#
+# Q9) Rectangle Information.
+#     This program displays information about a rectangle drawn by the user.
+#     Input: Two mouse clicks for the opposite corners of a rectangle.
+#     Output: Draw the rectangle.
+#             Print the perimeter and area of the rectangle.
+#     Formulas: area = (length)(width)
+#               perimeter = 2(length + width)
+#
+#This program displays information about a triangle draw by the user
+
+from graphics import *
+
+def main():
+    win = GraphWin("Drawing a rectangle", 400,400)
+    win.setCoords(0, 0, 20, 20)
+
+    #Store the co-ordinates of the 2 mouse clicks
+    point1 = win.getMouse()
+    point2 = win.getMouse()
+
+    #Create a rectangle
+    rectangle = Rectangle(point1, point2)
+    rectangle.draw(win)
+    win.getMouse() # pause for click in window
+
+    #Get the length and height of the rectangle
+    length = abs(point2.getX() - point1.getX())
+    height = abs(point2.getY() - point1.getY())
+
+    #Get the area of the triangle
+    area = length * height
+
+    #Get the perimeter of the rectangle
+    perimeter = 2 * (length * height)
+
+    #Print the area of the rectangle
+    # 2 example of showing the strings in a message output
+    #message1 = Text(Point(10,18), ("The area of the rectangle is : ", round(area,2)))
+    message1 = Text(Point(10,18), f"The area of the rectangle is: {area:.2f}") # :.2f rounds value to 2 decimal places
+    
+    message1.draw(win)
+
+    #Print the perimeter of the rectangle
+    message2 = Text(Point(10,16), f"The perimeter of the rectangle is: {perimeter:.2f}") # :.2f rounds value to 2 decimal places
+    message2.draw(win)
+
+    win.getMouse() # pause for click in window
+
+main()
+#
+# Q10)Triangle Information.
+#     Same as the previous problem, but with three clicks for the vertices of the triangle.
+#     Formulas: For perimeter, see length fromt he Line Segment problem.
+#     area = sqrt(s(s - a)(s - b)(s - c)) where a, b, and c are the lengths of the sides and s = (a + b + c) / 2.
+#
+#This program displays information about a triangle draw by the user
+
+from graphics import *
+
+from math import *
+
+def main():
+    win = GraphWin("Drawing a Triangle", 400,400)
+    win.setCoords(0, 0, 20, 20)
+
+    #Prompt the user to click 3 times
+    message =Text(Point(10,19), "Click 3 points to make a triangle")
+    message.draw(win)
+
+    #Store the co-ordinates of the 3 mouse clicks
+    point1 = win.getMouse()
+    point2 = win.getMouse()
+    point3 = win.getMouse()
+    x1 = point1.getX()
+    x2 = point2.getX()
+    y1 = point1.getY()
+    y2 = point2.getY()
+    x3 = point3.getX()
+    y3 = point3.getY()
+
+    #Create a triangle
+    triangle = Polygon(point1,point2,point3)
+    triangle.draw(win)
+
+    #Calculate the lengths of the sides
+    lengtha = sqrt((x2-x1)**2 + (y2-y1)**2)
+    lengthb = sqrt((x3-x1)**2 + (y3-y1)**2)
+    lengthc = sqrt((x3-x2)**2 + (y3-y2)**2)
+
+    #Calculate the perimeter
+    perimeter = lengtha + lengthb + lengthc
+
+    #Calculate s for the area calculation
+    # s = (a+b+c)/2
+    s = perimeter /2
+
+    #Calculate the area of the triangle
+    #area = square root of (s * (s-lengtha)(s-lengthb)(s-lengthc)
+    area = sqrt(s*(s-lengtha)*(s-lengthb)*(s-lengthc))
+
+    #State the perimeter and area of the rectangle
+    message2 = Text(Point(10,5), f" The area of the triangle is {area:.2f}")
+    message2.draw(win)
+
+    message3 = Text(Point(10,3), f" The perimeter of the triangle is {perimeter:.2f}")
+    message3.draw(win)
+    win.getMouse() # pause for click in window
+
+main()
+
     
 
     
