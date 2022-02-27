@@ -51,3 +51,43 @@
 #
 # A10. Reference Page 159 "We need some way to associate a file on disk with an object in a program. This process is called opening a file. Once a file has been opened, its 
 #      contents can be accessed through the associated file object.
+#
+# Multiple Choice
+#
+# Q1. Accessing a single character out of a string is called: [D]
+#     a) slicing     b) concatenation     c) assignment     d) indexing
+#
+# Q2. Which of the following is the same as s[0:-1] [C]
+#     a) s[-1]     b) s[:]     c) s[:len(s)-1]     d) s[0:1len(s)]
+#
+# Q3. What function gives the Unicode value of a character? [A]
+#     a) ord     b) ascii     c) chr     d) eval
+#     Reference Page 140. "Python provides a couple of built-in functions that allow us to switch back and forth between characters and the numberic values used to represent 
+#     them in strings. The ord function returns the numeric ("ordinal") code of a single-character string, while chr goes the other direction."
+#
+# Q4. Which of the following can not be used to convert a string of digits into a number? [D]
+#     a) int     b) float     c) str     d) eval
+#
+# Q5. A successor to ASCII that includes characters from (nearly) all written languages is [C]
+#     a) TELLI     b) ASCII+ +     c) Unicode     d) ISO
+#     Reference Page 140. "Most modern systems are moving to Unicode, a much larger standard that aims to include the characters of nearly all written languages."
+#
+# Q6. Which string method converts all the characters of a string to upper case? [D]
+#     a) capitalize     b) capwords     c) uppercase     d) upper
+#     See Page 148 table
+#
+# Q7. The string "slots that are filled in by the format method are marked by: [D]
+#     a) %     b) $     c) []     d) {}
+#     Reference Page 156. "Curly braces ({}) inside the template-string mark 'slots' into which the provided values are inserted. The information inside the curly braces tells 
+#     which value goes in the slot and how the value should be formatted.
+#
+# Q8. Which of the following is not a file-reading method in Python? [C]
+#     a) read     b) readline     c) readall     d) readlines
+#     Reference Page 161. "Python provides three related operations for reading information from a file [read, readline, readlines]."
+#
+# Q9. The term for a program that does its input and output with files is [C]
+#     a) file-oriented     b) multi-line     c) batch     d) lame
+#
+# Q10. Before reading or writing to a file, a file object must be created via [A]
+#     a) open     b) create     c) File     d) Folder
+#
