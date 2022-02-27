@@ -91,3 +91,21 @@
 # Q10. Before reading or writing to a file, a file object must be created via [A]
 #     a) open     b) create     c) File     d) Folder
 #
+# Discussion
+
+# Q1. Given the initial statements, show the results of evaluating each of the following string expressions
+#
+#     s1 = "spam"
+#     s2 = "ni!"
+#
+# Q1a "The knights who say, " + s2
+# A1a. The knights who say, ni!
+#
+# Q1b. 3 * s1 + 2 * s2
+# A1b. spamspamspamni!ni!
+#
+# Q1c. s1[1]
+# A1c. p
+#
+# Q1d. s1[1:3]
+# A1d. pa
