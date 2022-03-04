@@ -198,7 +198,25 @@ tfdsfu
 #
 # Q4. Show the string that would result from each of the following string formatting operations. If the operation is not legal, explain why:
 #
-# Q4a. 
+#     a) "Looks like (1) and (0) for breakfast".format("eggs", "spam")
+#        The operation is not legal. Curly braces are required around 1 and 0.
 
+#     b) "There is {0} {1} {2} {3}".format(1, "spam", 4 "you")
+#         'There is 1 spam 4 you.'
+
+#     c) "Hello {0}".format("Susan", "Computewell")
+#        'Hello Susan'
+
+#     d) "{0:0.2f} {0:0.2f}".format(2.3, 2.3468)
+#        '2.30 2.30'
+
+#     e) "{7.5f} {7.5f}".format(2.3, 2.3468)
+#        The operation is not legal. There is no index followed by : supplied in each of the curly braces.
+
+#     f) "Time left {0:02}:{1:05.2f}".format(1, 37.374)
+#        'Time left 1:37.37'
+
+#     g) "{1:3}".format("14")
+#        '14'
                 
 
