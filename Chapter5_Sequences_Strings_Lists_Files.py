@@ -218,5 +218,9 @@ tfdsfu
 
 #     g) "{1:3}".format("14")
 #        '14'
-                
+#
+# Q5. Explain why public key encryption is more useful for securing commmunications on the Internet than private (shared) key encryption.
+#
+# A5. Private keys must be known by both parties ahead of time. When contacting sites on the internet, say for e-commerce, there would be no practical way for the parties to exchange
+#  the private key.
 
