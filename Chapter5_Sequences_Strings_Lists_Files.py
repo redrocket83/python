@@ -223,4 +223,43 @@ tfdsfu
 #
 # A5. Private keys must be known by both parties ahead of time. When contacting sites on the internet, say for e-commerce, there would be no practical way for the parties to exchange
 #  the private key.
+#
+# Programming Exercises
+#
+# Q1. The example code files for Chapter 5 include a date conversion program, dateconvert2.py. This program could be
+#     simplified with string formatting. Modify the program to use the string format method for its output.
+#
+# dateconvert2.py
+# Converts day month and year numbers into two date formats
+def main():
+    # get the day month and year as numbers
+    day = int(input("Enter the day number: "))
+    month = int(input("Enter the month number: "))
+    year = int(input("Enter the year: "))
 
+    date1 = "{0}/{1}/{2}".format(month,day,year)
+
+    months = ["January", "February", "March", "April", 
+              "May", "June", "July", "August", 
+              "September", "October", "November", "December"]
+    monthStr = months[month-1]
+    date2 = "{0} {1}, {2}".format(monthStr, day, year)
+
+    print("The date is {0} or {1}".format(date1, date2))
+
+main()
+#
+# Q2. A certain CS professor gives 5-point quizzes that are graded on the scale 5-A, 4-B, 3-C, 2-D, 1-F, 0-F. Write a
+#     program that accepts a quiz score as an input and prints out the corresponding grade.
+#
+# Quiz grader
+
+def main():
+    print("Five point quiz grader")
+    score = int(input("Enter the score: "))
+    grade = "FFDCBA"[score]
+    print("The grade is", grade)
+
+main()
+#
+# Q3
