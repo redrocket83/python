@@ -262,4 +262,42 @@ def main():
 
 main()
 #
-# Q3
+# Q3. A certain CS professor gives 100-point exams that are graded on the scale 90-100:A, 80-89:B, 70-79:C, 60-69:D, <60:F.
+#     Write a program that accepts an exam score as input and prints out the corresponding grade.
+#
+# c05ex03.py
+# Exam grader
+# A CS professor gives 100 point exams that are grade don the scale 90-100:A, 80-89:B, 70-79:C, 60-69:D, <60:F
+
+def main():
+    print("Exam Grader")
+    score = int(input("Enter the score (out of 100): "))
+    grades = 60*"F"+10*"D"+10*"C"+10*"B"+11*"A"
+    print(grades)
+    print("The grade is", grades[score])
+
+main()
+#
+# Q4. An acronym is a word formed by taking the first letters of the words in a phrase and making a word from them. For example, RAM is an acronym for "random access memory." 
+#     Write a program that allows the user to type in a phrase and then outputs the acronym for that phrase. Note: The acronym should be all uppercase, even if the words in the
+#     phrase are not capitalized.
+#
+# c05ex04.py
+def main():
+    phrase = str(input("Enter the phrase you want an acronym for: "))
+    acronym = ""
+    for word in phrase.split():
+        acronym = acronym + word[0]
+    acronym = acronym.upper()
+
+    print("The acronym is", acronym)
+
+main()
+#
+# Q5. Numerologists claim to be able to determine a person's character traits based on the "numeric value" of a name. The value
+#     of a name is determined by summing up the values of the letters of the name where "a" is 1, "b" is 2, "c" is 3, up to "z"
+#     being 26. For example, the name "Zelle" would have the value 26 + 5 + 12 + 12 + 5 = 60 (which happens to be a very
+#     auspicious number, by the way). Write a program that calculates the numeric value of a single name provided as input.
+#
+
+
