@@ -299,5 +299,93 @@ main()
 #     being 26. For example, the name "Zelle" would have the value 26 + 5 + 12 + 12 + 5 = 60 (which happens to be a very
 #     auspicious number, by the way). Write a program that calculates the numeric value of a single name provided as input.
 #
+# A5. 
+#
+#c05ex05.py
+# using indexing
+
+def main():
+
+    #name = raw_input("Enter your name in lower case letter")
+    # another option to get a lower case namerh
+    name = input("Enter your name: ").lower()
+
+    # notice the space in front of 'a' this will give an index of a=1, b=2 and so on
+    # also gives a space an index of zero, so it won't count
+    letters = " abcdefghijklmnopqrstuvwxyz"
+
+    value = 0
+    for c in name:
+        print(c, letters.find(c))  # test
+        value = letters.find(c) + value
+    print("The numeric value of your name is", value)
+    
+main()
+#
+#  Or an another good way to do it
+#
+# c05ex05.py
+# Numerology of a single name
+def main():
+    print("This program computes the 'number value' of a name")
+    print()
+
+    name = input("Enter a single name: ")
+    total = 0
+    for letter in name:
+        total = total + ord(letter.lower()) - ord('a') + 1 # print(ord('a')) shows you that a in ord terms is 97
+
+    print("The value is:", total)
+   
+
+main()
+#
+# Question 6.Expand your solution to the previous problem to allow the calculation of a complete name such as "John Marvin Zelle" or "John Jacob Jingleheimer Smith." The 
+# total value is just the sum of the numberic values of all the names.
+#
+# c05ex06.py
+# Numerology of a full name
 
 
+def main():
+    print("This program computes the 'number value' of a name")
+    print()
+
+    names = input("Enter a name: ")
+
+    # Create a string of all the letters -- avoids nested loop
+    letters = "".join(names.split()) # https://www.programiz.com/python-programming/methods/string/join
+    total = 0
+    for letter in letters:
+        total = total + ord(letter.lower()) - ord('a') + 1
+
+    print("The value is:", total)
+
+main()
+#
+# Q7. A Caesar cipher is a simple substitution sipher based on the idea of shifting each letter of the plaintext message a fixed number (called the key) of positions in the 
+#     alphabet. For example, if the key is 2, the word "Sourpuss" would be encoded as "Uqwtrwuu." The original message can be recovered by "reencoding" it using the negative of
+#     the key.
+#
+#     Write a program that can enconde and decode Caesar ciphers. The input to the program will be a string of plaintext and the value of the key. The output will be an encoded 
+#     message where each character in the original message is replaced by shifting it key characters in the Unicode character set. For example, if ch is a character in the 
+#     string and key is the amount to shift, then the character that replaces ch can be calculated as: chr(ord(ch) + key)
+#
+def main():
+    print("This program encodes and decodes a caesar cipher")
+    print()
+
+    key = int(input("Enter the key value: "))
+    plaintext = input("Enter some plain text: ")
+    cipher = ""
+    for letter in plaintext:
+        cipher = cipher + chr(ord(letter) + key)
+    print(cipher)
+main()
+#
+# Q8. . One problem with the previous exercise is that it does not deal with the case when we "drop off the end" of the alphabet. A
+#     true Caesar cipher does the shifting in a circular fashion where the next character after "z" is "a." Modify your solution
+#     to the previous problem to make it circular. You may assume that the input consists only of letters and paces.
+#     Hint: Make a string containing all the cahracters of your alphabet and use positions in this string as your code. You do not
+#     have to shift "z" int "a"; jsut make sure that you use a circular shift over the entire sequence of characters in your alphabet
+#     string.
