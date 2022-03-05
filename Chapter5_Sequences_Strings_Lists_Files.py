@@ -383,9 +383,46 @@ def main():
     print(cipher)
 main()
 #
-# Q8. . One problem with the previous exercise is that it does not deal with the case when we "drop off the end" of the alphabet. A
-#     true Caesar cipher does the shifting in a circular fashion where the next character after "z" is "a." Modify your solution
-#     to the previous problem to make it circular. You may assume that the input consists only of letters and paces.
-#     Hint: Make a string containing all the cahracters of your alphabet and use positions in this string as your code. You do not
-#     have to shift "z" int "a"; jsut make sure that you use a circular shift over the entire sequence of characters in your alphabet
-#     string.
+# Q8. One problem with the previous exercise is that it does not deal with the case when we "drop off the end" of the alphabet. A true Caesar cipher does the shifting in a 
+#     circular fashion where the next character after "z" is "a." Modify your solution to the previous problem to make it circular. You may assume that the input consists only 
+#     of letters and spaces.
+#     Hint: Make a string containing all the characters of your alphabet and use positions in this string as your code. You do not have to shift "z" int "a"; just make sure that
+#     you use a circular shift over the entire sequence of characters in your alphabet string.
+#
+# c05ex08.py
+# Caesar cipher (circular version)
+def main():
+    print("Caesar cipher")
+    print()
+
+    key = int(input("Enter the key value: "))
+    plain = input("Enter the phrase to encode: ")
+
+    chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+
+    cipher = ""
+    for letter in plain:
+        pos = chars.find(letter)
+        newpos = (pos + key)
+        print(newpos) # me checking it works
+        cipher = cipher + chars[newpos]
+
+    print("Encoded message follows:")
+    print(cipher)
+
+main()
+#
+# Q9. Write a program that counts the number of words in a sentence entered by the user.
+#
+def main():
+    sentence = str(input("Please enter your sentence here: ")) #Example: I shot the sheriff
+    sentenceintowords = sentence.split() # example: ['I', 'shot', 'the', 'sheriff']
+    print(sentenceintowords) # Put this in to see the output of splitting the sentence
+    numberofwords = len(sentenceintowords)
+    print("The number of words in the sentence,", sentence, "is", numberofwords)
+main()
+#
+# Q10. Write a program that calculates the average word length in a sentence entered by the user.
+#      Same as above, but also count length of each words, add up all the numbers, divide by number of words.
+
+
