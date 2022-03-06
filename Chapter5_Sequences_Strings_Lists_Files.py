@@ -424,5 +424,127 @@ main()
 #
 # Q10. Write a program that calculates the average word length in a sentence entered by the user.
 #      Same as above, but also count length of each words, add up all the numbers, divide by number of words.
+#
+# c05ex10.py
+# Get the average word count from an input phrase or sentence
+def main():
+    sentence = (input("Please enter your sentence here: ")) # Example: I shot the sheriff
+    sentenceintowords = sentence.split() # Example: ['I', 'shot', 'the', 'sheriff']
+    print(sentenceintowords) # Put this in to see the output of splitting the sentence
+    numberofwords = len(sentenceintowords) # 4
+    print("The number of words in the sentence,", sentence, "is", numberofwords)
+    count = 0
+    for word in sentence.split():
+        count = count + len(word)
+
+    averagewordlength = count / numberofwords
+    print("The average word count of words in the sentence is: ", averagewordlength)
+
+main()
+#
+# Q11. Write an improved version of the chaos.py program from Chapter 1 that allows a user to input two initial values and the number of of iterations, and then prints a nicely
+#      formatted table showing how the values change over time. For example, if the starting values were .25 and .26 with 10 iterations, the table might look like this:
+#
+#     index    0.25         0.26
+#     ----------------------------
+#       1    0.731250     0.750360
+#       2    0.766441     0.730547
+#       3    0.698135     0.767707
+#       4    0.821896     0.695499
+#       5    0.570894     0.825942
+#       6    0.955399     0.560671
+#       7    0.166187     0.960644
+#       8    0.540418     0.147447
+#       9    0.968629     0.490255
+#      10    0.118509     0.974630
+#
+# c05ex11.py
+# Chaos program to print formatted side-by-side values
+
+def main():
+    print("This program illustrates a chaotic function")
+    x1 = float(input("Enter the first seed between 0 and 1: "))
+    x2 = float(input("Enter the second seed between 0 and 1: "))
+    print()
+    print("index     ", x1, "       ", x2)
+    print("-------------------------------")
+    for i in range(1, 11):
+        x1 = 3.9 * x1 * (1 - x1)
+        x2 = 3.9 * x2 * (1 - x2)
+        print("{0:2} {1:15.6f} {2:10.6f}".format(i, x1, x2))
+
+main()
+#
+# Q12. Write an improved version of the futval.py program from Chapter 2.
+#      Your program will prompt the user for the amount of the investment, the annualized interest rate, and the number of years of the investment. The program will then output a
+#      nicely formatted table that tracks the value of the investment year by year. Your output might look something like this:
+#
+#     Year     Value
+#     ----------------
+#       0     $2000.00
+#       1     $2200.00
+#       2     $2420.00
+#       3     $2662.00
+#       4     $2928.20
+#       5     $3221.02
+#       6     $3542.12
+#       7     $3897.43
+#
+# c05ex12.py
+# Future value with formatted table.
+
+def main():
+    print("This program calculates the future value of an investment.")
+    print()
+    
+    principal = float(input("Enter the initial principal: "))
+    apr = float(input("Enter the annualized interest rate: "))
+    years = int(input("Enter the number of years: "))
+
+    print("Year   Value")
+    print("--------------")
+    for i in range(years+1):
+        print("{0:3}   ${1:7.2f}".format(i, principal))
+        principal = principal * (1 + apr)
+
+main()
+#
+# Q13. Redo any of the previous programming exercises to make them batch-oriented (using text files for input and output
+#
+# c05ex13.py
+#    Batch Caesar cipher
+#    Input file format: first line is key value;
+#                       remaining lines are text to encode.
+
+
+def main():
+    print("Batch Caesar cipher")
+    print()
+
+    inName = input("Enter name of the input file: ")
+    infile = open(inName,'r')
+    key = int(infile.readline())
+
+    outName = input("Enter name of output file: ")
+    outfile = open(outName, 'w')
+    
+
+    chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+
+    for line in infile:
+        for letter in line[:-1]:
+            pos = chars.find(letter)
+            newpos = (pos + key) % len(chars)
+            print(chars[newpos], file=outfile, end="")
+        print(file=outfile)
+
+    infile.close()
+    outfile.close()
+    print("Done")
+
+main()
+#
+
+#
 
 
