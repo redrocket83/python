@@ -571,7 +571,22 @@ main()
 #      number of students in the file, and each subsequent line contains a student's last name followed by a score in the range 0-100. Your program should draw a horizontal 
 #      rectangle for each student where the length of the bar represents the student's score. The bars should all line up on their left-hand edges.
 #
+# Note: Page 158 for File Processing help
+#
 #     Hint: Use the number of students to determine the size of the window and its coordinates. 
 #     Bonus: label the bars at the left with the students' names.
 #
+#co05ex15.py
+# Student exam scores in a bar graph
+#
+# import graphics library
+from graphics import *
+
+# import dialog box for opening file
+from tkinter.filedialog import *
+def main():
+    infileName = askopenfilename() # Get the file name
+
+main()
+
 
