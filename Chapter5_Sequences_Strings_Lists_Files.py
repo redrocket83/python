@@ -512,10 +512,8 @@ main()
 # Q13. Redo any of the previous programming exercises to make them batch-oriented (using text files for input and output
 #
 # c05ex13.py
-#    Batch Caesar cipher
-#    Input file format: first line is key value;
-#                       remaining lines are text to encode.
-
+# Batch Caesar cipher
+# Input file format: first line is key value; remaining lines are text to encode.
 
 def main():
     print("Batch Caesar cipher")
@@ -528,7 +526,6 @@ def main():
     outName = input("Enter name of output file: ")
     outfile = open(outName, 'w')
     
-
     chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
 
     for line in infile:
@@ -544,7 +541,37 @@ def main():
 
 main()
 #
-
+# Q14. Word Count. A common utility on Unix/Linux systems is a small program called "wc." This program analyzes a file to determine the number of lines, words and characters 
+#      contained therein. Write your own verison of wc. The program should accept a file name as input and then print three numbers showing the count of lines, words, and 
+#      characters in the file.
 #
+# c05ex14.py
+# Program to count lines, words and characters in a file.
+# Note: Created a file at C:\Users\rhian\Dropbox\Python Course\Book course\Chapter 5 exercises\Chapter 5 Programming exercises\Question 14\rhiandetails.txt to enter as filename.
 
+def main():
+    print("File wordcount")
+    print()
+
+    fname = input("Enter filename: ")
+    infile = open(fname, 'r')
+    chars = infile.read()
+    infile.close()
+    
+    words = chars.split()
+    lines = chars.split("\n")
+
+    print("Characters:", len(chars))
+    print("Words:", len(words))
+    print("Lines:", len(lines))
+
+main()
+#
+# Q15. Write a program to plot a horizontal bar chart of student exam scores. Your program should get input from a file. The first line of the file contains the count of the 
+#      number of students in the file, and each subsequent line contains a student's last name followed by a score in the range 0-100. Your program should draw a horizontal 
+#      rectangle for each student where the length of the bar represents the student's score. The bars should all line up on their left-hand edges.
+#
+#     Hint: Use the number of students to determine the size of the window and its coordinates. 
+#     Bonus: label the bars at the left with the students' names.
+#
 
