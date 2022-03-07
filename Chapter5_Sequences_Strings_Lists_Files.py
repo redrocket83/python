@@ -571,22 +571,70 @@ main()
 #      number of students in the file, and each subsequent line contains a student's last name followed by a score in the range 0-100. Your program should draw a horizontal 
 #      rectangle for each student where the length of the bar represents the student's score. The bars should all line up on their left-hand edges.
 #
-# Note: Page 158 for File Processing help
+#      Note: Page 158 for File Processing help
 #
-#     Hint: Use the number of students to determine the size of the window and its coordinates. 
-#     Bonus: label the bars at the left with the students' names.
+#      Hint: Use the number of students to determine the size of the window and its coordinates. 
+#      Bonus: label the bars at the left with the students' names.
 #
-#co05ex15.py
+# co05ex15.py
 # Student exam scores in a bar graph
 #
-# import graphics library
-from graphics import *
+# Import the matplot library to plot bar graph
+# If you get a "Directory isn't on path error, then add the path it says in the error as an environment variable (in Windows)"
+import matplotlib.pyplot as plt # https://matplotlib.org/stable/users/installing/index.html
 
 # import dialog box for opening file
-from tkinter.filedialog import *
-def main():
-    infileName = askopenfilename() # Get the file name
+from tkinter.filedialog import askopenfilename
 
-main()
+# intialize the x and y with empty array
+x=[]
+y=[]
+
+# open the file in read mode
+infilename = askopenfilename() # get the file name
+grades = open(infilename, "r") # open and read file
+
+totalstudents = grades.readline() # By running this first, we take into account the 5 at the top of the grades.txt input file
+print(totalstudents)
+
+# read all the lines and store in form of array in Lines variable
+lines = grades.readlines()
+ 
+# run for loop for Lines array 
+for line in lines:
+    # in each iteration, split line into first name, last name and score
+    data=line.strip().split(" ")
+    print(data)
+    # then append the score to x array
+    x.append(int(data[-1]))
+    # and append the concatenation of last name
+    y.append(data[0])
+
+# store subplots in fig, and ax
+fig, ax = plt.subplots()    
+
+# plot the horizontal bar graph using barh function
+p1=ax.barh(y, x,0.5)
+
+#label the each bar graph with score using bar label function
+ax.bar_label(p1,x, label_type='center')
+
+# setting label of y-axis
+plt.ylabel("Students")
+
+# setting label of x-axis
+plt.xlabel("Scale of grades ( 10 - 100 )")
+
+# setting label of title
+plt.title("Student Surnames and Grades")
+
+# At last, this command helps to show plot
+plt.show()
+#
+# Q16. Write a program to draw a quiz score histogram. Your program should read data from a file. Each line of the file contains a number in the range 0-10. Your program must 
+#      count the number of occurences of each score and then draw a vertical bar chart with a bar for each possible score (0-10) with height corresponding to the count of that 
+#      score. For example, if 15 students got an 8, then the the height of the bar for 8 should be 15.
+#      Hint: Use a list that stores the count for each possible score.
+
 
 
