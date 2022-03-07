@@ -636,9 +636,10 @@ plt.show()
 #      score. For example, if 15 students got an 8, then the the height of the bar for 8 should be 15.
 #      Hint: Use a list that stores the count for each possible score.
 #
+# Import graph drawing s/w
 import matplotlib.pyplot as plt
-import numpy as np
-# import dialog box for opening file
+
+# iImport dialog box for opening file
 from tkinter.filedialog import askopenfilename
 
 # Open the file in which the scores are stored in
