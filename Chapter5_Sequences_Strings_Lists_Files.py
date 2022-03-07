@@ -635,6 +635,34 @@ plt.show()
 #      count the number of occurences of each score and then draw a vertical bar chart with a bar for each possible score (0-10) with height corresponding to the count of that 
 #      score. For example, if 15 students got an 8, then the the height of the bar for 8 should be 15.
 #      Hint: Use a list that stores the count for each possible score.
+#
+import matplotlib.pyplot as plt
+import numpy as np
+# import dialog box for opening file
+from tkinter.filedialog import askopenfilename
 
+# Open the file in which the scores are stored in
+infilename = askopenfilename() # get the file name
+
+# open the file in read mode
+quizscores = open(infilename, "r") # open and read file
+
+# Read all the lines in the file and store it in a list
+scores = quizscores.readlines()
+
+# Initialize a list for count of each scores
+counts = []
+for i in range(11):
+# Each line will be of the form "i\n" in the file
+# The same will be stored in scores list
+# So we use str(i)+"\n" to represent the scores
+    counts.append(scores.count(str(i)+"\n"))
+
+# Plot a bar graph with the obtained counts
+plt.bar(range(11), counts, align='center')
+
+# Set the label at the bottom of each bar to its count
+plt.gca().set_xticks(range(11))
+plt.show()
 
 
