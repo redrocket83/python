@@ -4,3 +4,11 @@
 # End-of-Chapter Exercises
 
 # Review Questions
+
+# True/False
+
+# 1. Programmer srarely define their own functions = False
+# 2. A function can only be called at once place in a program = False
+# 3. Information can be passed into a function through parameters = True
+# 4. Every Python function returns some value = True (None is returned when no explicit value is provided)
+# 5. In Python, some parameters are passed by reference = False. Technically by a value
