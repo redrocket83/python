@@ -11,4 +11,25 @@
 # 2. A function can only be called at once place in a program = False
 # 3. Information can be passed into a function through parameters = True
 # 4. Every Python function returns some value = True (None is returned when no explicit value is provided)
-# 5. In Python, some parameters are passed by reference = False. Technically by a value
+# 5. In Python, some parameters are passed by reference = False. Page 195. Technically Python passes all parameters by value
+# 6. In Python a function can return only one value = False. Page 203
+# 7. Python functions can never modify a parameter = False. Page 193/198/199. Parameters are always passed by value. However if the actual parameter is a variable whose 
+#    object is a mutable object like a list, then changes to the object will be visible to the other program.
+# 8. One reason to use functions is to reduce code duplication = True.
+# 9. Variables defined in a function are local to that function = True. Page 203. Formal parameters and other variables inside fucntion definitions are local to that 
+#    function
+# 10. It's a bad idea to define new functions if it makes a program longer = False. Although some programs look longer it makes it much easier for experienced programmers
+      to understand
+
+# Multiple Choice
+
+# 1. The part of a program which uses a function is 
+# 
+# a) User
+# b) Caller *
+# c) Callee
+# d) Statement
+
+#2. A python function definition begins with
+#
+# a)
