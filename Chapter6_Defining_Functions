@@ -91,3 +91,16 @@ Discussion
 # A2. In a sense a script always travels downwards, it just uses references to functions listed as it moves through the scripts so it may look like it is going backwards 
       and forwards but in fact, it is just referring to a pre created command. A bit like a journey where you keep going forwards, you just refer to the map every now 
       and again
+#
+# Q3a. Parameters are an important concept in defining functions. What is the purpose of parameters?
+# 
+# A3a. The only way for a function to see a variable from another function is for the variable to be passed as a parameter
+# 
+# Q3b. What is the difference between a formal parameter and an actual parameter?
+#
+# A3b. The parameter appearing in the function definition is called the formal parameter and the expressions appearing in a function call are known as the actual 
+       parameters
+#
+# Q3c. In what ways are parameters similar to and different from ordinary variables?
+# 
+# A3c. 
