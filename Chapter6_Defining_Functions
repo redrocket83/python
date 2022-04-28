@@ -79,3 +79,15 @@
 # c) its variables
 # d) None
 
+Discussion
+
+# Q1. In your own words, describe two motivations for defining functions in your programs
+#
+# A1. Functions are useful for reducing duplicate code within a script. Using functions can make a script more modular making it easier to read and manipulate
+#
+# Q2. We have been thinking about computer programs as sequences of instructions where the computer methodically executes one instruction and then moves on to the next
+      one. Do programs that contain functions fit this model.
+#
+# A2. In a sense a script always travels downwards, it just uses references to functions listed as it moves through the scripts so it may look like it is going backwards 
+      and forwards but in fact, it is just referring to a pre created command. A bit like a journey where you keep going forwards, you just refer to the map every now 
+      and again
