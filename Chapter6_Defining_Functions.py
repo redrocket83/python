@@ -119,6 +119,8 @@
 # Q5. Conside this simple function
 
 def cube(x):
+ answer = x * x * x
+ return answer
 
 
 
