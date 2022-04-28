@@ -116,13 +116,24 @@
 
 # A4b. Usually through a return statement. Functions may also change the values of mutable parameters
 
-# Q5. Conside this simple function
+# Q5a. Consider this simple function. What does thsi function do?
 
 def cube(x):
  answer = x * x * x
  return answer
 
+# A5a. This function computes the cube of x
 
+# Q5b. Show how a program could use this function to print the value of y(3)
+
+def cube(y)
+
+# Q5c. Here is a fragment of the program that uses this function. The output from this function is 4 27. Explain why the output is not 27 27 even though the cube seems to
+#      to change the value of the answer to 27.
+#
+ answer = 4
+ result = cube(3)
+ print(answer, result)
 
 
 
