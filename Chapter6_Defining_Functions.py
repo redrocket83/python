@@ -135,5 +135,9 @@ def cube(y)
  result = cube(3)
  print(answer, result)
 
+# A5c. There are two different variables named answer. The variable inside of cube is changed, but it does not affect the value of the other variable.
+
+# Programming Exercises
+
 
 
