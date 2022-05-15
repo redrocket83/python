@@ -139,5 +139,45 @@ def cube(y)
 
 # Programming Exercises
 
+# Exercise 1
+
+# Write a program to print the lyrcis of "Old McDonald had a Farm for 5 different animals
+
+#Old McDonald had a Farm
+
+def line1():
+    print("Old McDonald had a farm,", "Ee-igh, Ee-igh, Oh!")
+
+def verse(animal, noise):
+    print("And on that farm he had a(n)", animal+",", "Ee-igh, Ee-igh, Oh!")
+    print("With a", noise, noise, "here and a", noise, noise, "there")
+    print("Here a", noise+",", "there a", noise+",", "everywhere a(n)", noise, noise)
 
 
+def main():
+    line1()
+    verse("horse", "neigh")
+    line1()
+    print()
+    line1()
+    verse("duck", "quack")
+    line1()
+    print()  
+    line1()
+    verse("sheep", "baa")
+    line1()
+    print()
+    line1()
+    verse("cow", "moo")
+    line1()
+    print()
+    line1()
+    verse("dog", "woof")
+    line1()
+    print()
+
+main()
+
+# Exercise 2
+
+# Write a program to print the lyrics for ten verses of "The ant's go marching in
