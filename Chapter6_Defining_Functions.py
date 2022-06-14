@@ -181,3 +181,26 @@ main()
 # Exercise 2
 
 # Write a program to print the lyrics for ten verses of "The ant's go marching in
+
+# The ants go marching in
+
+def verse():
+        print("Into the ground...")
+        print("To get out...")
+        print("Of the rain.")
+        print("Boom! " * 3)
+
+def ants():
+    num = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
+    rhyme = ['suck his thumb','tie his shoe','brush his hair', 'shut the door','dance like crazy','pick up stones', 'eat the grass','make a cake', 'eat a bug', 'chase the cat']
+    for i in range (10):
+        print("The ants go marching {0} by {0}, hurrah! hurrah!".format(str(num[i])))
+        print("The ants go marching {0} by {0}, hurrah! hurrah!".format(str(num[i])))
+        print("The ants go marching {0} by {0},".format(str(num[i])))
+        print("The little one stops to {0},".format(str(rhyme[i])))
+        print("And they all go marching down...")
+        verse()
+        print()
+def main():
+    ants()
+main()
