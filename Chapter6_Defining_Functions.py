@@ -204,3 +204,35 @@ def ants():
 def main():
     ants()
 main()
+
+# Exercise 3
+
+# Write definitions for these functions
+
+# sphereArea(radius) Returns the surface area of a sphere having a given radius
+
+# Calculating the radius of a sphere
+import math
+
+def sphereArea(radius):
+    return 4 * math.pi * radius**2
+
+def sphereVolume(radius):
+    return (4 / 3) * math.pi * radius * radius * radius
+
+def main():
+    r = eval(input("Enter the radius of the sphere: "))
+    print("The area of the sphereis", sphereArea(r))
+    print()
+    print("The volume of a sphere is", sphereVolume(r))
+
+main()
+
+# Exercise 4
+
+# Write definitions for the following two functions
+
+# sumN(n) returns the sum of the first n natural numbers
+# sumNCubes(n) returns the sum of the cubes of the first n natural numbers
+
+
