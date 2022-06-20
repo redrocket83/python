@@ -235,4 +235,40 @@ main()
 # sumN(n) returns the sum of the first n natural numbers
 # sumNCubes(n) returns the sum of the cubes of the first n natural numbers
 
+def sumN(n):
+    total = 0
+    for i in range(1,n+1):
+        total = total + i
+    return total
 
+def sumNCube(n):
+    total = 0
+    for i in range(1,n+1):
+        total = total + i**3
+    return total
+
+def main():
+    print("This program computes the sum and sum of cubes of the first")
+    print("N natural numbers.\n")
+
+    n = int(input("Please enter a value for n: "))
+    print("The sum of the first %d natural numbers is %d" % (n,sumN(n)))
+    print("The sum of the cubes of those numbers is %d" % (sumNCube(n)))
+
+main()
+
+#Here are some basic argument specifiers you should know:
+
+#%s - String (or any object with a string representation, like numbers)
+
+#%d - Integers
+
+#%f - Floating point numbers
+
+#%.<number of digits>f - Floating point numbers with a fixed amount of digits to the right of the dot.
+
+#%x/%X - Integers in hex representation (lowercase/uppercase)
+
+# Exercise 5
+
+# Redo Programming Exercise 2 from Chapter 3. use two functions - one to compute the area of a pizza and one to compute cost per square inch.
