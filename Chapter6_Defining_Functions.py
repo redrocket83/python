@@ -272,3 +272,30 @@ main()
 # Exercise 5
 
 # Redo Programming Exercise 2 from Chapter 3. use two functions - one to compute the area of a pizza and one to compute cost per square inch.
+
+#This program will calculate the cost per square inch of a pizza given its diameter and price
+
+#Don't forget you may need float as the divsion may not produce integers (Final output will say 0)
+
+#When formatting at the end, use %f for floating point numbers
+
+import math
+
+#Calculate the area of a pizza
+
+def area(d):
+    return math.pi * (0.5 * d)**2
+
+#calculate the cost per square inch of the pizza 
+
+def costPerInch(d, price):
+    return float(price) / area(d)
+
+def main():
+    print("This program will calculate the area and the cost per square inch of a pizza given its diameter and price")
+    diameter = float(input("What is the diameter of the pizza? "))
+    cost = float(input("What is the cost of the pizza? "))
+    print("The area of the pizza is %f" % (area(diameter)))
+    print("The cost per square inch of the pizza is $%f " % (costPerInch(diameter,cost)))
+
+main()
