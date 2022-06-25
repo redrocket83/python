@@ -323,3 +323,27 @@ def main():
     print("The area of a triangle is", round(triangle(a, b, c), 2))
 
 main()
+
+# Exercise 7
+
+# Write a function to compute the nth Fibonacci number. Use your function to solve Programming Exercise 16 from Chapter 3
+
+# This program computes the nth Fibonacci number
+
+# Example 0, 1, 2, 3, 4, 5, 6, 7
+#         0, 1, 1, 2, 3, 5, 8, 13
+
+def Fibonacci(number):
+    if (number == 0):
+        return 0
+    elif (number == 1):
+        return 1
+    else:
+        return (Fibonacci(number - 2) + Fibonacci(number - 1))
+
+def main():
+    number = int(input("Enter the Range Number: "))
+    for n in range(0, number):
+        print(Fibonacci(n))
+
+main()
