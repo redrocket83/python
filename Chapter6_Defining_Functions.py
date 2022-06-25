@@ -299,3 +299,27 @@ def main():
     print("The cost per square inch of the pizza is $%f " % (costPerInch(diameter,cost)))
 
 main()
+
+#Exercise 6
+
+#Write a program to calculate the area of a triangle given the length of its 3 sides as parameters. (See programming exercise 9 from Chapter 3) Use your function to 
+#augment triangle2.py from this chapter so that it also displays the area of the triangle
+
+import math
+
+def triangle(a, b, c):
+    # The bottom 2 calculations are what is needed from C3Ex9 to calulate the area of a triangle
+    s = (a + b + c) / 2
+    A = math.sqrt(s * (s-a) * (s-b) * (s-c))
+    return A
+
+def main():
+    a, b ,c  = eval(input("Please enter the length of the 3 sides of the triangle separated by a comma: "))
+    A = triangle(a, b, c)
+    print("The bottom 4 lines show different ways of formatting")
+    print("The area of a triangle is", round(A, 2))
+    print("The area of a triangle is %d" %(A))
+    print (f"The area of a triangle is {A}.")
+    print("The area of a triangle is", round(triangle(a, b, c), 2))
+
+main()
