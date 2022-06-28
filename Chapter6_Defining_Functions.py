@@ -347,3 +347,24 @@ def main():
         print(Fibonacci(n))
 
 main()
+
+# Exercise 8 
+
+# Solve Programming Exercise 17 from Chapter 3 using a function nextGuess(guess, x)
+
+def nextGuess(guess, x):
+    return (guess + x/guess) / 2.0
+
+def sqrRoot(x, n):
+    guess = x / 2.0
+    for i in range(n):
+        guess = nextGuess(guess, x)
+    return guess
+    
+
+def main():
+    x = float(input("Enter the value to take the root of: "))
+    n = int(input("Enter the number of iterations: "))
+    print("Square root is", sqrRoot(x, n))
+
+main(
