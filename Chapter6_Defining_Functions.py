@@ -367,4 +367,43 @@ def main():
     n = int(input("Enter the number of iterations: "))
     print("Square root is", sqrRoot(x, n))
 
-main(
+main()
+
+# Exercise 9
+
+# Original problem from Chapter 5 Exercise 3
+# A certain CS professor gives 100-point exams that are graded on the scale90- 100:A, 80-89:B, 70-79:C, 60-69:D, <60:F.
+# Write a program that accepts an exam score as input and prints out the corresponding grade.
+
+# New problem
+# Do Programming Exercise 3 from Chapter 5 using a function grade (score) that returns the letter grade for a score.
+
+def grade(score):
+    return "FFDCBA"[score]
+
+def main():
+    print("Quiz Grader")
+    score = int(input("Enter the score (0-5): "))
+    print("The grade is", grade(score))
+
+main()
+
+# Exercise 10
+
+#Do Programming Exercise 4 from Chapter 5 using a function acronym(phrase) that returns an acronym for a phrase supplied as a string.
+
+# Acronym generator using functions
+
+def acronym(phrase):
+    ans = ""
+    for word in phrase.split():
+        ans = ans + word[0]
+    return ans.upper()
+
+def main():
+    print("Phrase to Acronym builder")
+    words = input("Enter a phrase: ")
+    print()
+    print("Acronym:", acronym(words))
+
+main()
