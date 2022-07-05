@@ -407,3 +407,42 @@ def main():
     print("Acronym:", acronym(words))
 
 main()
+
+# Chapter 6 - Exercise 11
+
+# Write and test a function to meet this specification
+
+# squareEach(nums) is a list of numbers. Modify the list by squaring each entry
+
+import math
+
+def squareEach(nums):
+    for i in range(len(nums)):
+        nums[i] = nums[i]**2
+
+def main():
+    nums = list(range(10))
+    squareEach(nums)
+    print(nums)
+
+main()
+
+# Chapter 6 - Exercise 12
+
+# Write and test a function to meet this specification
+
+# sumList(nums) nums is a list of numbers. Return the sum of numbers in the list
+
+import math
+
+def sumList(nums):
+    sum = 0 # Don't forget here to use 0 as the integer and not "" as I first did thinking I could add to a list
+    for num in nums:
+        sum = sum + num
+    return sum
+
+def main():
+    nums = list(range(10))
+    print(sumList(nums))
+
+main()
