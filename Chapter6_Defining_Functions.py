@@ -446,3 +446,20 @@ def main():
     print(sumList(nums))
 
 main()
+
+# Chapter 6 - Exercise 13.
+# Write and test a function to meet this specification
+
+# toNumbers(strList) strList is a list of strings each of which represents a number. Modifies each entry in the list by
+# converting it to a number
+
+def toNumbers(strList):
+    for number in range(len(strList)):
+        strList[number] = float(strList[number])
+
+def main():
+    list = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    toNumbers(list)
+    print(list)
+
+main()
