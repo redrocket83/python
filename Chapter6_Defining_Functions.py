@@ -490,3 +490,47 @@ def main():
     print("Sum of squares:", sumList(data))
 
 main()
+
+#Chapter 6 Exercise 15
+
+# This function can draw a smiley or grim face. Demonstrate the function by writing a program that draws several faces of varying sizes in a single window
+
+from graphics import *
+
+def drawFace(center, size, window):
+    # head draws a circle centered at a point with a radius of size
+    head = Circle(center, size)
+    head.setFill("green")
+    head.draw(window)
+    # lefteye
+    eyeSize = size * 0.25
+    eyeOff = size / 2.5
+    leftEye = Circle(center, eyeSize)
+    # Moving an object move(dx,dy) moves the object dx units in the x direction and dy units in the y direction
+    leftEye.move(-eyeOff, -eyeOff)
+    leftEye.draw(window)
+    # righteye
+    rightEye = Circle(center, eyeSize)
+    rightEye.move(eyeOff, -eyeOff)
+    leftEye.setFill("yellow")
+    rightEye.setFill("yellow")
+    rightEye.draw(window)
+    # mouth
+    mouthSize = 0.8 * size
+    mouthOff = size / 2.0
+    p1 = center.clone()
+    p1.move(-mouthSize / 2, mouthOff)
+    p2 = center.clone()
+    p2.move(mouthSize / 2, mouthOff)
+    mouth = Line(p1, p2)
+    mouth.draw(window)
+
+def main():
+    win = GraphWin("Faces")
+    drawFace(Point(50, 50), 20, win)
+    drawFace(Point(100, 100), 30, win)
+    drawFace(Point(160, 160), 40, win)
+    win.getMouse()
+    win.close()
+
+main()
