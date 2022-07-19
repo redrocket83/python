@@ -595,3 +595,26 @@ def main():
     
 main()
 
+# Chapter 6 - Exercise 17
+# Moving a circle with a function
+
+from graphics import *
+
+def moveTo(shape, newCenter):
+    center = shape.getCenter() # returns a clone of the center point of the circle
+    dx = newCenter.getX() - center.getX() # Returns the x value of a point
+    dy = newCenter.getY() - center.getY() # Returns the y value of a point
+    shape.move(dx,dy)
+
+def main():
+    win = GraphWin("Circle Mover", 400, 400) # GraphWin(title, width, height)
+    item = Circle(Point(200,200), 40) # Constructs a circle with a given center point and radius)
+    item.setFill("red") # Fill circle in chosen colour
+    item.draw(win) # Draw the circle
+    for i in range(10): # For range of 10 clicks
+        p = win.getMouse() # Pauses for the user to click the mouse in the window and returns p as the point where the mouse was clicked
+        moveTo(item, p) # Go to the moveTo function
+    win.getMouse()
+    win.close() # Closes the on screen window
+
+main()
